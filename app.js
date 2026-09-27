@@ -272,3 +272,8 @@ function renderVlog() {
   const box = document.getElementById("vlogBox");
   box.innerHTML = VLOG_DAYS.map(v => `<div class="vlog-card"><h3>${v.title}</h3><ul class="shot-list">${v.shots.map(s => `<li>${s}</li>`).join("")}</ul></div>`).join("");
 }
+
+// ===== 初始化 =====
+loadTrip(); loadExpenses(); loadNotes();
+renderAll(); renderLedger(); renderOverviewCharts();
+
