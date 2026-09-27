@@ -7,67 +7,52 @@
   <meta name="theme-color" content="#fafaf7">
   <title>2026 国庆旅行 · 重庆成都</title>
   <style>
-:root{
-  --bg:#fafaf7; --card:#ffffff; --text:#2c2c2c; --text2:#7a7a78; --text3:#b0b0ab;
-  --sep:rgba(0,0,0,0.06); --sep2:rgba(0,0,0,0.12);
-  --red:#c05e3f; --orange:#c08a3e; --gold:#b8a24c; --green:#6b8e7a; --blue:#4a6fa5; --purple:#7e6b8f; --pink:#b87b8b;
-  --font-display:"Songti SC","Noto Serif SC","STSong",Georgia,"Times New Roman",serif;
-  --font-body:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;
-  --shadow:0 2px 20px rgba(0,0,0,0.04); --shadow-lg:0 12px 40px rgba(0,0,0,0.07);
-  --radius:20px;
-}
+:root{--bg:#fafaf7;--card:#ffffff;--text:#2c2c2c;--text2:#7a7a78;--text3:#b0b0ab;--sep:rgba(0,0,0,0.06);--sep2:rgba(0,0,0,0.12);--red:#c05e3f;--orange:#c08a3e;--gold:#b8a24c;--green:#6b8e7a;--blue:#4a6fa5;--purple:#7e6b8f;--pink:#b87b8b;--font-display:"Songti SC","Noto Serif SC","STSong",Georgia,"Times New Roman",serif;--font-body:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;--shadow:0 2px 20px rgba(0,0,0,0.04);--radius:20px}
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:17px;line-height:1.68;font-weight:400;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom);overflow-x:hidden}
-.glass-nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.86);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--sep);padding:0 env(safe-area-inset-right) 0 env(safe-area-inset-left)}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:17px;line-height:1.68;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom);overflow-x:hidden}
+.glass-nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.86);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--sep)}
 .nav-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:4px;padding:10px 16px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .nav-inner::-webkit-scrollbar{display:none}
-.nav-btn{position:relative;padding:9px 18px;border:none;background:transparent;font-size:1rem;font-weight:500;color:var(--text2);cursor:pointer;white-space:nowrap;border-radius:100px;transition:all .25s;-webkit-touch-callout:none;user-select:none;min-height:40px}
-.nav-btn:hover{color:var(--text)}
+.nav-btn{padding:9px 18px;border:none;background:transparent;font-size:1rem;font-weight:500;color:var(--text2);cursor:pointer;white-space:nowrap;border-radius:100px;transition:all .25s;user-select:none;min-height:40px}
 .nav-btn.active{color:var(--text);background:#fff;box-shadow:0 1px 4px rgba(0,0,0,0.08);font-weight:600}
 .section{display:none;max-width:1000px;margin:0 auto;padding:36px 24px 60px;animation:fiu .5s ease-out}
 .section.active{display:block}
 @keyframes fiu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-.banner{position:relative;border-radius:28px;padding:52px 40px;margin-bottom:34px;background:linear-gradient(135deg,#f6ece4 0%,#f3f1e8 45%,#e8eef2 100%);overflow:hidden;border:1px solid rgba(0,0,0,0.04);box-shadow:var(--shadow)}
-.banner::after{content:"";position:absolute;right:-70px;top:-70px;width:280px;height:280px;background:radial-gradient(circle,rgba(192,94,63,0.16),transparent 70%);border-radius:50%;pointer-events:none}
-.banner::before{content:"";position:absolute;left:-50px;bottom:-90px;width:240px;height:240px;background:radial-gradient(circle,rgba(74,111,165,0.16),transparent 70%);border-radius:50%;pointer-events:none}
-.banner-badge{position:relative;z-index:1;display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.7);border:1px solid var(--sep);padding:7px 16px;border-radius:100px;font-size:0.9rem;font-weight:600;color:var(--text2);margin-bottom:20px}
+.banner{position:relative;border-radius:28px;padding:52px 40px;margin-bottom:34px;background:linear-gradient(135deg,#f6ece4 0%,#f3f1e8 45%,#e8eef2 100%);overflow:hidden;border:1px solid rgba(0,0,0,0.04)}
 .banner h1{position:relative;z-index:1;font-family:var(--font-display);font-size:clamp(2.9rem,7vw,4.2rem);font-weight:700;letter-spacing:0.01em;line-height:1.12;margin-bottom:12px;color:var(--text)}
 .banner h1 .amp{background:linear-gradient(120deg,#c05e3f,#c08a3e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic;font-family:Georgia,serif;padding:0 6px}
-.banner-sub{position:relative;z-index:1;font-size:1.15rem;color:var(--text2);letter-spacing:0.04em;margin-bottom:6px}
-.banner-date{position:relative;z-index:1;font-family:var(--font-display);font-size:1.05rem;color:var(--text3);letter-spacing:0.2em;font-variant-numeric:tabular-nums}
+.banner-sub{position:relative;z-index:1;font-size:1.15rem;color:var(--text2);margin-bottom:6px}
+.banner-date{position:relative;z-index:1;font-family:var(--font-display);font-size:1.05rem;color:var(--text3);letter-spacing:0.2em}
 .banner-meta{position:relative;z-index:1;margin-top:28px;display:flex;gap:10px;flex-wrap:wrap}
-.banner-chip{background:rgba(255,255,255,0.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--sep);padding:8px 16px;border-radius:12px;font-size:0.9rem;color:var(--text2)}
+.banner-chip{background:rgba(255,255,255,0.7);border:1px solid var(--sep);padding:8px 16px;border-radius:12px;font-size:0.9rem;color:var(--text2)}
 .banner-chip b{color:var(--text);font-weight:600}
-.sec-title{font-family:var(--font-display);font-size:1.9rem;font-weight:700;letter-spacing:0.01em;margin-bottom:6px;color:var(--text)}
+.sec-title{font-family:var(--font-display);font-size:1.9rem;font-weight:700;margin-bottom:6px;color:var(--text)}
 .sec-sub{font-size:1rem;color:var(--text2);margin-bottom:26px}
 .sec-title .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:10px;background:linear-gradient(135deg,#c05e3f,#c08a3e);vertical-align:middle}
 .info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:36px}
-details.info-cell{background:var(--card);border-radius:var(--radius);border:1px solid var(--sep);position:relative;overflow:hidden;transition:box-shadow .25s}
+details.info-cell{background:var(--card);border-radius:var(--radius);border:1px solid var(--sep);position:relative;overflow:hidden}
 details.info-cell::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#c05e3f}
 details.info-cell:nth-child(2)::before{background:#c08a3e}
 details.info-cell:nth-child(3)::before{background:#4a6fa5}
 details.info-cell:nth-child(4)::before{background:#6b8e7a}
-details.info-cell[open]{box-shadow:var(--shadow)}
-details.info-cell summary{list-style:none;cursor:pointer;padding:22px;display:flex;flex-direction:column;gap:4px;-webkit-tap-highlight-color:transparent;user-select:none}
+details.info-cell summary{list-style:none;cursor:pointer;padding:22px;display:flex;flex-direction:column;gap:4px;user-select:none}
 details.info-cell summary::-webkit-details-marker{display:none}
 details.info-cell summary .k{font-size:0.8rem;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase}
-details.info-cell summary .v{font-family:var(--font-display);font-size:1.25rem;font-weight:600;color:var(--text)}
+details.info-cell summary .v{font-family:var(--font-display);font-size:1.25rem;font-weight:600}
 details.info-cell summary .hint{font-size:0.75rem;color:var(--text3)}
-.info-detail{padding:0 22px 22px 22px;border-top:1px dashed var(--sep2);padding-top:16px;margin-top:4px}
+.info-detail{padding:0 22px 22px;border-top:1px dashed var(--sep2);padding-top:16px;margin-top:4px}
 .info-detail .item{display:flex;justify-content:space-between;gap:10px;padding:7px 0;font-size:0.9rem;border-bottom:1px solid var(--sep)}
 .info-detail .item:last-child{border-bottom:none}
-.info-detail .item .n{color:var(--text2)}
-.info-detail .item .p{color:var(--text);font-weight:500;text-align:right}
-.info-detail .item .p b{color:#c05e3f;font-weight:600}
-.info-detail .tag-mini{font-size:0.72rem;padding:2px 8px;border-radius:6px;margin-right:6px}
+.info-detail .n{color:var(--text2)}
+.info-detail .p{color:var(--text);font-weight:500;text-align:right}
+.info-detail .p b{color:#c05e3f;font-weight:600}
+.tag-mini{font-size:0.72rem;padding:2px 8px;border-radius:6px;margin-right:6px}
 .charts-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:34px}
-@media(max-width:640px){.charts-row{grid-template-columns:1fr}}
 .chart-panel{background:var(--card);border-radius:var(--radius);padding:26px;border:1px solid var(--sep)}
-.chart-panel h3{font-size:1.05rem;font-weight:600;margin-bottom:20px;color:var(--text);display:flex;align-items:center;gap:8px}
+.chart-panel h3{font-size:1.05rem;font-weight:600;margin-bottom:20px;display:flex;align-items:center;gap:8px}
 .chart-panel h3 .ic{width:26px;height:26px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-size:0.9rem}
 #pieBox{display:flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:center}
-#pieSvg{flex-shrink:0}
 #pieLegend{flex:1;min-width:150px;display:flex;flex-direction:column;gap:10px}
 .pie-leg{display:flex;align-items:center;gap:9px;font-size:0.9rem;color:var(--text2)}
 .pie-leg .sw{width:11px;height:11px;border-radius:3px;flex-shrink:0}
@@ -78,35 +63,25 @@ details.info-cell summary .hint{font-size:0.75rem;color:var(--text3)}
 .bar-row .lbl{min-width:44px;color:var(--text2)}
 .bar-row .trk{flex:1;height:14px;background:var(--bg);border-radius:7px;overflow:hidden}
 .bar-row .fill{height:100%;border-radius:7px;transition:width .6s cubic-bezier(0.4,0,0.2,1)}
-.bar-row .val{min-width:62px;text-align:right;font-weight:600;color:var(--text);font-variant-numeric:tabular-nums;font-family:var(--font-display)}
+.bar-row .val{min-width:62px;text-align:right;font-weight:600;font-variant-numeric:tabular-nums;font-family:var(--font-display)}
 .timeline{position:relative;padding-left:36px;margin-bottom:36px}
 .timeline::before{content:"";position:absolute;left:10px;top:8px;bottom:8px;width:3px;background:linear-gradient(180deg,#c05e3f,#c08a3e,#b8a24c,#6b8e7a,#4a6fa5,#7e6b8f);border-radius:2px}
 .timeline-item{position:relative;padding-bottom:22px}
 .timeline-item:last-child{padding-bottom:0}
-.timeline-dot{position:absolute;left:-31px;top:6px;width:16px;height:16px;background:#fff;border:3px solid #c05e3f;border-radius:50%;box-shadow:0 0 0 3px rgba(192,94,63,0.14)}
-.timeline-item:nth-child(2) .timeline-dot{border-color:#c08a3e;box-shadow:0 0 0 3px rgba(192,138,62,0.14)}
-.timeline-item:nth-child(3) .timeline-dot{border-color:#b8a24c;box-shadow:0 0 0 3px rgba(184,162,76,0.14)}
-.timeline-item:nth-child(4) .timeline-dot{border-color:#6b8e7a;box-shadow:0 0 0 3px rgba(107,142,122,0.14)}
-.timeline-item:nth-child(5) .timeline-dot{border-color:#4a6fa5;box-shadow:0 0 0 3px rgba(74,111,165,0.14)}
-.timeline-item:nth-child(6) .timeline-dot{border-color:#7e6b8f;box-shadow:0 0 0 3px rgba(126,107,143,0.14)}
-.timeline-item:nth-child(7) .timeline-dot{border-color:#6b8e7a;box-shadow:0 0 0 3px rgba(107,142,122,0.14)}
+.timeline-dot{position:absolute;left:-31px;top:6px;width:16px;height:16px;background:#fff;border:3px solid #c05e3f;border-radius:50%}
 .timeline-content{background:var(--card);border-radius:16px;padding:20px 22px;border:1px solid var(--sep)}
 .timeline-date{font-family:var(--font-display);font-size:0.9rem;font-weight:600;color:#c05e3f;letter-spacing:0.06em;margin-bottom:4px}
-.timeline-title{font-size:1.15rem;font-weight:600;margin-bottom:4px;color:var(--text)}
+.timeline-title{font-size:1.15rem;font-weight:600;margin-bottom:4px}
 .timeline-detail{font-size:0.95rem;color:var(--text2);line-height:1.6}
 .tips-section{background:var(--card);border-radius:var(--radius);padding:28px 30px;border:1px solid var(--sep)}
-.tips-section h3{font-family:var(--font-display);font-size:1.35rem;font-weight:700;margin-bottom:18px;color:var(--text)}
-.tip-item{padding:14px 0;border-bottom:1px solid var(--sep);font-size:0.98rem;line-height:1.6;display:flex;gap:12px;align-items:flex-start;color:var(--text)}
+.tips-section h3{font-family:var(--font-display);font-size:1.35rem;font-weight:700;margin-bottom:18px}
+.tip-item{padding:14px 0;border-bottom:1px solid var(--sep);font-size:0.98rem;line-height:1.6;display:flex;gap:12px;align-items:flex-start}
 .tip-item:last-child{border-bottom:none}
 .tip-icon{font-size:1.2rem;flex-shrink:0;margin-top:1px}
 .route-card{background:var(--card);border-radius:var(--radius);padding:26px 28px;margin-bottom:18px;border:1px solid var(--sep);border-left:3px solid #c05e3f}
-.route-card:nth-child(2){border-left-color:#c08a3e}
-.route-card:nth-child(3){border-left-color:#b8a24c}
-.route-card:nth-child(4){border-left-color:#4a6fa5}
-.route-card:nth-child(5){border-left-color:#7e6b8f}
-.route-card h3{font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:14px;color:var(--text)}
+.route-card h3{font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:14px}
 .route-flow{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:14px}
-.route-node{background:var(--bg);padding:8px 15px;border-radius:100px;font-size:0.92rem;font-weight:500;color:var(--text);border:1px solid var(--sep)}
+.route-node{background:var(--bg);padding:8px 15px;border-radius:100px;font-size:0.92rem;font-weight:500;border:1px solid var(--sep)}
 .route-node.highlight{background:linear-gradient(135deg,#c05e3f,#c08a3e);color:#fff;border:none}
 .route-arrow{color:var(--text3);font-size:0.85rem}
 .route-tip{background:#f5f0e6;border-left:3px solid #c08a3e;padding:13px 16px;border-radius:0 12px 12px 0;font-size:0.92rem;color:var(--text2);line-height:1.65}
@@ -115,31 +90,34 @@ details.info-cell summary .hint{font-size:0.75rem;color:var(--text3)}
 .day-badge{width:54px;height:54px;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;flex-shrink:0;font-family:var(--font-display)}
 .day-badge .num{font-size:1.35rem;font-weight:700;line-height:1}
 .day-badge .label{font-size:0.58rem;font-weight:500;opacity:0.85;letter-spacing:0.06em}
-.day-info h3{font-size:1.12rem;font-weight:600;margin-bottom:2px;color:var(--text)}
+.day-info h3{font-size:1.12rem;font-weight:600;margin-bottom:2px}
 .day-info p{font-size:0.88rem;color:var(--text2)}
 .weather-chip{display:flex;align-items:center;gap:6px;background:#eef2f5;border:1px solid rgba(74,111,165,0.2);padding:6px 14px;border-radius:100px;font-size:0.9rem;color:#3d5f8f;font-weight:500}
 .day-actions{margin-left:auto}
-.day-actions button{background:var(--bg);border:1px solid var(--sep);padding:9px 18px;border-radius:100px;font-size:0.9rem;font-weight:500;color:#c05e3f;cursor:pointer;transition:all .2s;min-height:40px}
+.day-actions button{background:var(--bg);border:1px solid var(--sep);padding:9px 18px;border-radius:100px;font-size:0.9rem;font-weight:500;color:#c05e3f;cursor:pointer;min-height:40px}
 .schedule-list{display:flex;flex-direction:column}
 .schedule-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--sep)}
 .schedule-row:last-child{border-bottom:none}
-.schedule-time{font-family:var(--font-display);font-size:0.88rem;font-weight:600;color:var(--text2);min-width:80px;flex-shrink:0;font-variant-numeric:tabular-nums}
-.schedule-tag{font-size:0.72rem;font-weight:600;padding:3px 11px;border-radius:100px;flex-shrink:0;letter-spacing:0.03em}
+.schedule-time{font-family:var(--font-display);font-size:0.88rem;font-weight:600;color:var(--text2);min-width:80px;flex-shrink:0}
+.schedule-tag{font-size:0.72rem;font-weight:600;padding:3px 11px;border-radius:100px;flex-shrink:0}
 .tag-transport{background:rgba(74,111,165,0.13);color:#3d6395}
 .tag-hotel{background:rgba(192,94,63,0.13);color:#a84f33}
 .tag-sight{background:rgba(107,142,122,0.13);color:#4e7a64}
 .tag-food{background:rgba(192,138,62,0.13);color:#a8742f}
 .tag-ticket{background:rgba(126,107,143,0.13);color:#6a5680}
-.schedule-desc{flex:1;font-size:0.95rem;color:var(--text)}
+.schedule-desc{flex:1;font-size:0.95rem}
 .schedule-desc strong{color:#c05e3f;font-weight:600}
+.spot-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px;flex:1}
+.spot-chip{background:#f0f4f1;padding:4px 12px;border-radius:100px;font-size:0.85rem;border:1px solid rgba(107,142,122,0.2)}
+.spot-chip .e{margin-right:4px}
 .day-notes-area{margin-top:14px;padding-top:14px;border-top:1px dashed var(--sep2)}
-.note-bubble{background:#f5f0e6;border-radius:12px;padding:12px 16px;margin-bottom:8px;font-size:0.9rem;color:var(--text);display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
-.note-bubble .note-delete{background:none;border:none;color:var(--text3);font-size:1.1rem;cursor:pointer;padding:0 4px;flex-shrink:0;min-width:30px;min-height:30px}
+.note-bubble{background:#f5f0e6;border-radius:12px;padding:12px 16px;margin-bottom:8px;font-size:0.9rem;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.note-bubble .note-delete{background:none;border:none;color:var(--text3);font-size:1.1rem;cursor:pointer;padding:0 4px}
 .city-block{border-radius:var(--radius);padding:28px 30px;margin-bottom:28px;border:1px solid var(--sep)}
 .city-block.cq{background:linear-gradient(135deg,#f6ece4,#f3f1e8)}
 .city-block.cd{background:linear-gradient(135deg,#e8eef2,#f0eef4)}
 .city-block.transition{background:linear-gradient(135deg,rgba(107,142,122,0.16),rgba(192,94,63,0.16))}
-.city-title{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--text);margin-bottom:6px}
+.city-title{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:1.4rem;font-weight:700;margin-bottom:6px}
 .city-title .ct-em{font-size:1.5rem}
 .city-sub{font-size:0.9rem;color:var(--text2);margin-bottom:24px}
 .flow-day{margin-bottom:26px}
@@ -148,201 +126,98 @@ details.info-cell summary .hint{font-size:0.75rem;color:var(--text3)}
 .flow-day-label .badge{color:#fff;padding:4px 14px;border-radius:100px;font-size:0.85rem;font-weight:600}
 .flow-day-label .zone{font-size:0.9rem;color:var(--text2)}
 .flow-spots{display:flex;flex-wrap:wrap;align-items:center;gap:8px;row-gap:14px}
-.flow-spot{display:flex;flex-direction:column;align-items:center;gap:4px;position:relative}
+.flow-spot{display:flex;flex-direction:column;align-items:center;gap:4px}
 .flow-spot .node{width:52px;height:52px;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;position:relative;box-shadow:var(--shadow)}
 .flow-spot .node .em{font-size:1.3rem;line-height:1}
 .flow-spot .node .idx{position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;background:#fff;color:var(--text);font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--sep2)}
-.flow-spot .nm{font-size:0.8rem;color:var(--text);text-align:center;max-width:64px;line-height:1.3}
+.flow-spot .nm{font-size:0.8rem;text-align:center;max-width:64px;line-height:1.3}
 .flow-arrow{color:var(--text3);font-size:1.1rem;flex-shrink:0;margin:0 2px}
-.flow-divider{height:1px;background:var(--sep2);margin:26px 0}
 .vlog-card{background:var(--card);border-radius:var(--radius);padding:24px 26px;margin-bottom:18px;border:1px solid var(--sep)}
-.vlog-card h3{font-family:var(--font-display);font-size:1.12rem;font-weight:700;margin-bottom:12px;color:var(--text)}
+.vlog-card h3{font-family:var(--font-display);font-size:1.12rem;font-weight:700;margin-bottom:12px}
 .shot-list{list-style:none}
-.shot-list li{padding:10px 0;font-size:0.95rem;border-bottom:1px solid var(--sep);color:var(--text);display:flex;align-items:center;gap:10px}
+.shot-list li{padding:10px 0;font-size:0.95rem;border-bottom:1px solid var(--sep)}
 .shot-list li:last-child{border-bottom:none}
 .vlog-upload-card{background:linear-gradient(135deg,#eef2f5,#f4eef2);border-radius:var(--radius);padding:30px 32px;margin-top:28px;border:1px solid var(--sep)}
-.vlog-upload-card h3{font-family:var(--font-display);font-size:1.35rem;font-weight:700;margin-bottom:14px;color:var(--text)}
+.vlog-upload-card h3{font-family:var(--font-display);font-size:1.35rem;font-weight:700;margin-bottom:14px}
 .vlog-upload-card p,.vlog-upload-card li{font-size:0.95rem;color:var(--text2);line-height:1.65}
 .vlog-upload-card ul{margin:10px 0;padding-left:20px}
 .vlog-upload-card li{margin:5px 0}
 .vlog-tip{background:rgba(255,255,255,0.7);border:1px solid var(--sep);padding:12px 16px;border-radius:12px;margin-top:14px;font-size:0.9rem;color:var(--text2)}
 .ledger-summary{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:24px}
-@media(min-width:600px){.ledger-summary{grid-template-columns:1fr 1.6fr}}
 .total-card{background:linear-gradient(135deg,#f6ece4,#f3f1e8);border-radius:var(--radius);padding:30px;text-align:center;border:1px solid rgba(192,94,63,0.15)}
-.total-card .label{font-size:0.9rem;color:var(--text2);letter-spacing:0.06em;margin-bottom:10px;font-weight:500}
-.total-card .amount{font-family:var(--font-display);font-size:2.6rem;font-weight:700;letter-spacing:-0.01em;color:var(--text)}
+.total-card .label{font-size:0.9rem;color:var(--text2);margin-bottom:10px}
+.total-card .amount{font-family:var(--font-display);font-size:2.6rem;font-weight:700;color:var(--text)}
 .total-card .sub{font-size:0.85rem;color:var(--text2);margin-top:8px}
 .chart-card{background:var(--card);border-radius:var(--radius);padding:24px;border:1px solid var(--sep);display:flex;flex-direction:column;gap:13px}
 .chart-row{display:flex;align-items:center;gap:12px}
 .chart-label{font-size:0.92rem;font-weight:500;min-width:46px;color:var(--text2)}
 .chart-track{flex:1;height:11px;background:var(--bg);border-radius:6px;overflow:hidden}
 .chart-fill{height:100%;border-radius:6px;transition:width .6s cubic-bezier(0.4,0,0.2,1)}
-.chart-value{font-family:var(--font-display);font-size:0.92rem;font-weight:600;color:var(--text);min-width:60px;text-align:right;font-variant-numeric:tabular-nums}
+.chart-value{font-family:var(--font-display);font-size:0.92rem;font-weight:600;min-width:60px;text-align:right}
 .add-form{background:var(--card);border-radius:var(--radius);padding:26px 28px;margin-bottom:22px;border:1px solid var(--sep)}
 .add-form h3{font-family:var(--font-display);font-size:1.25rem;font-weight:700;margin-bottom:18px}
 .form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:16px}
-@media(min-width:600px){.form-grid{grid-template-columns:repeat(4,1fr)}}
 .form-field{display:flex;flex-direction:column;gap:5px}
-.form-field label{font-size:0.82rem;font-weight:500;color:var(--text3);letter-spacing:0.04em}
-.form-field input,.form-field select{padding:12px 14px;border:1px solid var(--sep2);border-radius:12px;font-size:1rem;font-family:inherit;background:#fff;color:var(--text);-webkit-appearance:none;transition:border-color .2s}
-.form-field input:focus,.form-field select:focus{outline:none;border-color:#4a6fa5}
-.btn-primary{background:linear-gradient(135deg,#c05e3f,#c08a3e);color:#fff;border:none;padding:14px 32px;border-radius:100px;font-size:1rem;font-weight:600;cursor:pointer;transition:all .2s;min-height:48px;-webkit-appearance:none}
-.btn-primary:active{transform:scale(0.96);opacity:0.9}
-.filter-bar{display:flex;gap:8px;margin-bottom:18px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:2px 0}
-.filter-bar::-webkit-scrollbar{display:none}
-.filter-pill{padding:9px 18px;border:1px solid var(--sep2);background:#fff;border-radius:100px;font-size:0.92rem;font-weight:500;cursor:pointer;white-space:nowrap;transition:all .2s;min-height:38px;color:var(--text2)}
+.form-field label{font-size:0.82rem;font-weight:500;color:var(--text3)}
+.form-field input,.form-field select{padding:12px 14px;border:1px solid var(--sep2);border-radius:12px;font-size:1rem;font-family:inherit;background:#fff;color:var(--text);-webkit-appearance:none}
+.btn-primary{background:linear-gradient(135deg,#c05e3f,#c08a3e);color:#fff;border:none;padding:14px 32px;border-radius:100px;font-size:1rem;font-weight:600;cursor:pointer;min-height:48px;-webkit-appearance:none}
+.filter-bar{display:flex;gap:8px;margin-bottom:18px;overflow-x:auto;scrollbar-width:none;padding:2px 0}
+.filter-pill{padding:9px 18px;border:1px solid var(--sep2);background:#fff;border-radius:100px;font-size:0.92rem;font-weight:500;cursor:pointer;white-space:nowrap;min-height:38px;color:var(--text2)}
 .filter-pill.active{background:linear-gradient(135deg,#c05e3f,#c08a3e);color:#fff;border-color:transparent}
 .ledger-table-wrap{background:var(--card);border-radius:var(--radius);padding:18px 20px;border:1px solid var(--sep);overflow-x:auto}
 .ledger-table{width:100%;border-collapse:collapse;font-size:0.95rem;min-width:420px}
-.ledger-table th{text-align:left;padding:12px 10px;border-bottom:1px solid var(--sep2);font-weight:600;font-size:0.8rem;color:var(--text3);letter-spacing:0.04em}
-.ledger-table td{padding:14px 10px;border-bottom:1px solid var(--sep);color:var(--text)}
-.ledger-table tr:last-child td{border-bottom:none}
-.del-btn{background:none;border:none;color:#c05e3f;font-size:1.05rem;cursor:pointer;padding:6px;border-radius:8px;min-width:34px;min-height:34px}
+.ledger-table th{text-align:left;padding:12px 10px;border-bottom:1px solid var(--sep2);font-weight:600;font-size:0.8rem;color:var(--text3)}
+.ledger-table td{padding:14px 10px;border-bottom:1px solid var(--sep)}
+.del-btn{background:none;border:none;color:#c05e3f;font-size:1.05rem;cursor:pointer;padding:6px}
 .adjust-hero{background:linear-gradient(135deg,#f6ece4,#f4eef2);border-radius:16px;padding:18px 24px;margin-bottom:18px;border:1px solid var(--sep);display:flex;align-items:center;gap:14px}
 .adjust-hero .ic{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#c05e3f,#c08a3e);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
-.adjust-hero h3{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--text)}
+.adjust-hero h3{font-family:var(--font-display);font-size:1.15rem;font-weight:700}
 .adjust-hero p{font-size:0.85rem;color:var(--text2)}
 .adjust-input-group{display:flex;flex-direction:column;gap:12px;margin-bottom:18px}
 .adjust-input-group textarea{width:100%;padding:18px 20px;border:1px solid var(--sep2);border-radius:16px;font-size:1.05rem;font-family:inherit;background:#fff;color:var(--text);-webkit-appearance:none;min-height:160px;resize:vertical;line-height:1.6}
-.adjust-input-group textarea:focus{outline:none;border-color:#c05e3f}
 .adjust-input-group button{background:linear-gradient(135deg,#c05e3f,#c08a3e);color:#fff;border:none;padding:16px 32px;border-radius:14px;font-size:1.05rem;font-weight:600;cursor:pointer;min-height:52px;-webkit-appearance:none;align-self:flex-end}
 .quick-chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:20px}
-.quick-chips button{background:#fff;border:1px solid var(--sep2);padding:10px 18px;border-radius:100px;font-size:0.92rem;font-weight:500;cursor:pointer;transition:all .2s;min-height:40px;color:var(--text2)}
+.quick-chips button{background:#fff;border:1px solid var(--sep2);padding:10px 18px;border-radius:100px;font-size:0.92rem;font-weight:500;cursor:pointer;min-height:40px;color:var(--text2)}
 .result-box{background:var(--card);border-radius:16px;padding:24px;display:none;border-left:4px solid #6b8e7a;border:1px solid var(--sep)}
 .result-box.show{display:block}
 .result-box.error{border-left:4px solid #c05e3f}
-.result-box h4{font-size:1.05rem;font-weight:600;margin-bottom:6px;color:var(--text)}
+.result-box h4{font-size:1.05rem;font-weight:600;margin-bottom:6px}
 .result-box p{font-size:0.95rem;color:var(--text2)}
-.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2000;align-items:center;justify-content:center;padding:20px}
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);backdrop-filter:blur(8px);z-index:2000;align-items:center;justify-content:center;padding:20px}
 .modal-bg.show{display:flex}
 .modal-box{background:#fff;border-radius:22px;padding:26px;width:100%;max-width:440px;max-height:80vh;overflow-y:auto;box-shadow:0 25px 50px -12px rgba(0,0,0,0.2)}
 .modal-box h3{font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:14px}
 .modal-box textarea{width:100%;padding:14px;border:1px solid var(--sep2);border-radius:14px;font-size:1rem;font-family:inherit;resize:vertical;min-height:110px;background:var(--bg);color:var(--text);-webkit-appearance:none}
-.modal-box textarea:focus{outline:none;border-color:#4a6fa5}
 .modal-btns{display:flex;gap:10px;margin-top:18px}
 .modal-btns button{flex:1;padding:13px;border-radius:12px;font-size:1rem;font-weight:600;cursor:pointer;border:none;min-height:46px}
 .btn-secondary{background:var(--bg);color:var(--text)}
-@media(max-width:640px){
-  .section{padding:24px 16px 44px}
-  .banner{padding:38px 24px;border-radius:22px}
-  .banner h1{font-size:2.5rem}
-  .sec-title{font-size:1.6rem}
-  .charts-row{grid-template-columns:1fr}
-  .info-grid{grid-template-columns:1fr;gap:10px}
-  .info-cell{padding:16px}
-  .timeline{padding-left:30px}
-  .timeline-content{padding:16px 18px}
-  .route-card,.day-card{padding:20px 18px}
-  .tips-section{padding:22px 18px}
-  .form-grid{grid-template-columns:1fr}
-  .adjust-input-group button{width:100%;align-self:stretch}
-  .ledger-summary{grid-template-columns:1fr}
-  .total-card .amount{font-size:2.1rem}
-  .day-header{gap:12px}
-  .day-badge{width:48px;height:48px;border-radius:12px}
-  .nav-btn{font-size:0.9rem;padding:8px 13px}
-  #pieBox{flex-direction:column;align-items:center}
-  .flow-spot .node{width:46px;height:46px;border-radius:13px}
-}
+@media(min-width:600px){.ledger-summary{grid-template-columns:1fr 1.6fr}.form-grid{grid-template-columns:repeat(4,1fr)}.charts-row{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.section{padding:24px 16px 44px}.banner{padding:38px 24px}.banner h1{font-size:2.5rem}.sec-title{font-size:1.6rem}.info-grid{grid-template-columns:1fr;gap:10px}.timeline{padding-left:30px}.route-card,.day-card{padding:20px 18px}.tips-section{padding:22px 18px}.form-grid{grid-template-columns:1fr}.adjust-input-group button{width:100%;align-self:stretch}.ledger-summary{grid-template-columns:1fr}.total-card .amount{font-size:2.1rem}.day-header{gap:12px}.day-badge{width:48px;height:48px}.nav-btn{font-size:0.9rem;padding:8px 13px}.flow-spot .node{width:46px;height:46px}.charts-row{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-  <div class="modal-bg" id="modalBg">
-    <div class="modal-box">
-      <h3 id="modalTitle">添加备注</h3>
-      <textarea id="modalInput" placeholder="输入内容..."></textarea>
-      <div class="modal-btns">
-        <button class="btn-secondary" id="modalCancel">取消</button>
-        <button class="btn-primary" id="modalSave">保存</button>
-      </div>
-    </div>
-  </div>
-  <nav class="glass-nav" id="nav">
-    <div class="nav-inner">
+  <div class="modal-bg" id="modalBg"><div class="modal-box"><h3 id="modalTitle">添加备注</h3><textarea id="modalInput" placeholder="输入内容..."></textarea><div class="modal-btns"><button class="btn-secondary" id="modalCancel">取消</button><button class="btn-primary" id="modalSave">保存</button></div></div></div>
+  <nav class="glass-nav" id="nav"><div class="nav-inner">
       <button class="nav-btn active" data-tab="overview">总览</button>
       <button class="nav-btn" data-tab="daily">行程</button>
       <button class="nav-btn" data-tab="ledger">账本</button>
       <button class="nav-btn" data-tab="map">地图</button>
       <button class="nav-btn" data-tab="vlog">Vlog</button>
       <button class="nav-btn" data-tab="adjust">调整</button>
-    </div>
-  </nav>
+  </div></nav>
   <section id="overview" class="section active">
-    <div class="banner">
-      <div class="banner-badge"><span>🇨🇳</span> 2026 国庆旅行</div>
-      <h1>重庆 <span class="amp">&</span> 成都</h1>
-      <p class="banner-sub">我和妞妞的七天浪漫之旅</p>
-      <p class="banner-date">10.01 — 10.07</p>
-      <div class="banner-meta">
-        <span class="banner-chip">出发地 <b>苏州 / 南京</b></span>
-        <span class="banner-chip">重庆段 <b>10.1 晚 — 10.4 下午</b></span>
-        <span class="banner-chip">成都段 <b>10.4 晚 — 10.7 下午</b></span>
-        <span class="banner-chip">行程 <b>7天6晚</b></span>
-      </div>
-    </div>
+    <div class="banner"><div class="banner-badge" style="display:none"></div><h1>重庆 <span class="amp">&</span> 成都</h1><p class="banner-sub">我和妞妞的七天浪漫之旅</p><p class="banner-date">10.01 — 10.07</p><div class="banner-meta"><span class="banner-chip">出发地 <b>苏州 / 南京</b></span><span class="banner-chip">重庆段 <b>10.1 晚 — 10.4 下午</b></span><span class="banner-chip">成都段 <b>10.4 晚 — 10.7 下午</b></span><span class="banner-chip">行程 <b>7天6晚</b></span></div></div>
     <div class="info-grid">
-      <details class="info-cell">
-        <summary><span class="k">出行人</span><span class="v">我 &amp; 妞妞</span><span class="hint">点击展开 · 出发详情</span></summary>
-        <div class="info-detail">
-          <div class="item"><span class="n">我</span><span class="p">从苏州工业园区出发</span></div>
-          <div class="item"><span class="n">妞妞</span><span class="p">从南京出发</span></div>
-          <div class="item"><span class="n">汇合</span><span class="p">10月1日 南京站</span></div>
-        </div>
-      </details>
-      <details class="info-cell">
-        <summary><span class="k">出行方式</span><span class="v">高铁 · 飞机 · 打车</span><span class="hint">点击展开 · 交通明细</span></summary>
-        <div class="info-detail">
-          <div class="item"><span class="n"><span class="tag-mini tag-transport">高铁</span>5 程</span><span class="p"><b>¥684.5</b></span></div>
-          <div class="item"><span class="n"><span class="tag-mini tag-transport">飞机</span>2 程</span><span class="p"><b>¥5102</b></span></div>
-          <div class="item"><span class="n"><span class="tag-mini tag-transport">打车</span>9 程</span><span class="p"><b>¥465</b></span></div>
-          <div class="item"><span class="n"><span class="tag-mini tag-transport">地铁</span>5 程</span><span class="p"><b>¥41</b></span></div>
-          <div class="item"><span class="n"><span class="tag-mini tag-transport">大巴</span>1 程</span><span class="p"><b>¥25</b></span></div>
-        </div>
-      </details>
-      <details class="info-cell">
-        <summary><span class="k">已订酒店</span><span class="v">6 晚 · 5 家</span><span class="hint">点击展开 · 酒店明细</span></summary>
-        <div class="info-detail">
-          <div class="item"><span class="n">10.1 全季机场店</span><span class="p"><b>¥401</b></span></div>
-          <div class="item"><span class="n">10.1 南京钟点房</span><span class="p"><b>¥205</b></span></div>
-          <div class="item"><span class="n">10.2 康莱德</span><span class="p"><b>¥2722</b></span></div>
-          <div class="item"><span class="n">10.3 来福士洲际</span><span class="p"><b>¥2270</b></span></div>
-          <div class="item"><span class="n">10.4-5 希尔顿嘉悦里</span><span class="p"><b>¥1942</b></span></div>
-          <div class="item"><span class="n">10.6 成都W酒店</span><span class="p"><b>¥1434</b></span></div>
-        </div>
-      </details>
-      <details class="info-cell">
-        <summary><span class="k">景点打卡</span><span class="v">重庆 12 + 成都 8</span><span class="hint">点击展开 · 景点明细</span></summary>
-        <div class="info-detail">
-          <div class="item"><span class="n">重庆</span><span class="p">解放碑 · 洪崖洞 · 十八梯 · 山城步道 · 弹子石 · 下浩里 · 龙门浩 · 湖广会馆 · 鹅岭二厂 · 李子坝 · 三峡博物馆 · 光环购物公园</span></div>
-          <div class="item"><span class="n">成都</span><span class="p">三星堆 · 都江堰 · 杜甫草堂 · 成都博物馆 · 东郊记忆 · 武侯祠 · 锦里 · 天府广场</span></div>
-        </div>
-      </details>
+      <details class="info-cell"><summary><span class="k">出行人</span><span class="v">我 &amp; 妞妞</span><span class="hint">点击展开 · 出发详情</span></summary><div class="info-detail"><div class="item"><span class="n">我</span><span class="p">从苏州工业园区出发</span></div><div class="item"><span class="n">妞妞</span><span class="p">从南京出发</span></div><div class="item"><span class="n">汇合</span><span class="p">10月1日 南京站</span></div></div></details>
+      <details class="info-cell"><summary><span class="k">出行方式</span><span class="v">高铁 · 飞机 · 打车</span><span class="hint">点击展开 · 交通明细</span></summary><div class="info-detail"><div class="item"><span class="n"><span class="tag-mini tag-transport">高铁</span>5 程</span><span class="p"><b>¥684.5</b></span></div><div class="item"><span class="n"><span class="tag-mini tag-transport">飞机</span>2 程</span><span class="p"><b>¥5102</b></span></div><div class="item"><span class="n"><span class="tag-mini tag-transport">打车</span>9 程</span><span class="p"><b>¥465</b></span></div><div class="item"><span class="n"><span class="tag-mini tag-transport">地铁</span>5 程</span><span class="p"><b>¥41</b></span></div><div class="item"><span class="n"><span class="tag-mini tag-transport">大巴</span>1 程</span><span class="p"><b>¥25</b></span></div></div></details>
+      <details class="info-cell"><summary><span class="k">已订酒店</span><span class="v">6 晚 · 5 家</span><span class="hint">点击展开 · 酒店明细</span></summary><div class="info-detail"><div class="item"><span class="n">10.1 全季机场店</span><span class="p"><b>¥401</b></span></div><div class="item"><span class="n">10.1 南京钟点房</span><span class="p"><b>¥205</b></span></div><div class="item"><span class="n">10.2 康莱德</span><span class="p"><b>¥2722</b></span></div><div class="item"><span class="n">10.3 来福士洲际</span><span class="p"><b>¥2270</b></span></div><div class="item"><span class="n">10.4-5 希尔顿嘉悦里</span><span class="p"><b>¥1942</b></span></div><div class="item"><span class="n">10.6 成都W酒店</span><span class="p"><b>¥1434</b></span></div></div></details>
+      <details class="info-cell"><summary><span class="k">景点打卡</span><span class="v">重庆 12 + 成都 8</span><span class="hint">点击展开 · 景点明细</span></summary><div class="info-detail"><div class="item"><span class="n">重庆</span><span class="p">解放碑 · 洪崖洞 · 十八梯 · 山城步道 · 弹子石 · 下浩里 · 龙门浩 · 湖广会馆 · 鹅岭二厂 · 李子坝 · 三峡博物馆 · 光环购物公园</span></div><div class="item"><span class="n">成都</span><span class="p">三星堆 · 都江堰 · 杜甫草堂 · 成都博物馆 · 东郊记忆 · 武侯祠 · 锦里 · 天府广场</span></div></div></details>
     </div>
-    <h2 class="sec-title"><span class="dot"></span>费用概览</h2>
-    <p class="sec-sub">预算明细一目了然</p>
-    <div class="charts-row">
-      <div class="chart-panel">
-        <h3><span class="ic" style="background:rgba(192,94,63,0.1)">◔</span> 费用占比</h3>
-        <div id="pieBox"></div>
-      </div>
-      <div class="chart-panel">
-        <h3><span class="ic" style="background:rgba(74,111,165,0.1)">▤</span> 分类金额</h3>
-        <div id="barBox"></div>
-      </div>
-    </div>
-    <h2 class="sec-title"><span class="dot"></span>行程时间轴</h2>
-    <p class="sec-sub">七天六晚，从苏州到南京，飞往重庆，高铁转成都</p>
-    <div class="timeline">
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">10 月 1 日</div><div class="timeline-title">出发日</div><div class="timeline-detail">苏州 → 南京 → 重庆。高铁 G7010，禄口机场飞重庆，入住全季酒店</div></div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">10 月 2 日</div><div class="timeline-title">重庆 Day 1 · 南岸与渝中</div><div class="timeline-detail">弹子石 → 下浩里 → 龙门浩 → 解放碑 → 十八梯 → 山城步道 → 洪崖洞</div></div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">10 月 3 日</div><div class="timeline-title">重庆 Day 2 · 渝中深度游</div><div class="timeline-detail">鹅岭二厂 → 李子坝 → 三峡博物馆 → 湖广会馆 → 朝天门</div></div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">10 月 4 日</div><div class="timeline-title">转场日 · 重庆到成都</div><div class="timeline-detail">光环购物公园 → 高铁 G7628 → 成都东站 → 希尔顿嘉悦里 → 天府广场晚餐</div></div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">10 月 5 日</div><div class="timeline-title">成都 Day 1 · 广汉与都江堰</div><div class="timeline-detail">三星堆 → 都江堰 → 高铁 S5058 回成都。行程最满，带好充电宝</div></div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">10 月 6 日</div><div class="timeline-title">成都 Day 2 · 文化游</div><div class="timeline-detail">杜甫草堂 → 成都博物馆 → 东郊记忆</div></div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">10 月 7 日</div><div class="timeline-title">返程日 · 成都回苏州</div><div class="timeline-detail">上午逛逛 → 15:00 去双流机场 → 18:30 飞南京 → Z175 火车 → 回苏州</div></div></div>
-    </div>
-    <div class="tips-section">
-      <h3>出行提醒</h3>
+    <h2 class="sec-title"><span class="dot"></span>费用概览</h2><p class="sec-sub">预算明细一目了然</p>
+    <div class="charts-row"><div class="chart-panel"><h3><span class="ic" style="background:rgba(192,94,63,0.1)">◔</span> 费用占比</h3><div id="pieBox"></div></div><div class="chart-panel"><h3><span class="ic" style="background:rgba(74,111,165,0.1)">▤</span> 分类金额</h3><div id="barBox"></div></div></div>
+    <h2 class="sec-title"><span class="dot"></span>行程时间轴</h2><p class="sec-sub">七天六晚，从苏州到南京，飞往重庆，高铁转成都</p>
+    <div class="timeline" id="timelineBox"></div>
+    <div class="tips-section"><h3>出行提醒</h3>
       <div class="tip-item"><span class="tip-icon">🗓️</span><span><strong>10月1日</strong>行程紧凑，新街口到禄口机场地铁约80分钟，注意航班时间</span></div>
       <div class="tip-item"><span class="tip-icon">⚡</span><span><strong>10月5日</strong>三星堆+都江堰行程最满，建议7:30起床，带好充电宝和干粮</span></div>
       <div class="tip-item"><span class="tip-icon">✈️</span><span><strong>10月7日</strong>18:30航班，建议15:00从W酒店出发去双流机场</span></div>
@@ -354,205 +229,29 @@ details.info-cell summary .hint{font-size:0.75rem;color:var(--text3)}
     </div>
   </section>
   <section id="daily" class="section">
-    <h2 class="sec-title"><span class="dot"></span>每日行程</h2>
-    <p class="sec-sub">基于地理位置规划的科学线路，减少来回奔波 · 天气为10月当地预计</p>
-    <div class="route-card"><h3>重庆 · 南岸区到渝中区</h3><div class="route-flow"><span class="route-node">康莱德</span> <span class="route-arrow">→</span> <span class="route-node">弹子石</span> <span class="route-arrow">→</span> <span class="route-node">下浩里</span> <span class="route-arrow">→</span> <span class="route-node">龙门浩</span> <span class="route-arrow">→</span> <span class="route-node">解放碑</span> <span class="route-arrow">→</span> <span class="route-node">十八梯</span> <span class="route-arrow">→</span> <span class="route-node">山城步道</span> <span class="route-arrow">→</span> <span class="route-node highlight">洪崖洞</span></div><div class="route-tip">💡 上午南岸区步行游览（弹子石、下浩里、龙门浩相邻）；下午过江逛解放碑、十八梯、山城步道；晚上看洪崖洞夜景，上千厮门大桥拍全景</div></div>
-    <div class="route-card"><h3>重庆 · 渝中区深度游</h3><div class="route-flow"><span class="route-node">来福士</span> <span class="route-arrow">→</span> <span class="route-node">鹅岭二厂</span> <span class="route-arrow">→</span> <span class="route-node highlight">李子坝</span> <span class="route-arrow">→</span> <span class="route-node">三峡博物馆</span> <span class="route-arrow">→</span> <span class="route-node">湖广会馆</span> <span class="route-arrow">→</span> <span class="route-node">朝天门</span></div><div class="route-tip">💡 上午鹅岭二厂拍照，李子坝看轻轨穿楼；下午三峡博物馆（需预约）；傍晚湖广会馆；晚上朝天门夜景</div></div>
-    <div class="route-card"><h3>重庆 · 渝北区到转场</h3><div class="route-flow"><span class="route-node">来福士</span> <span class="route-arrow">→</span> <span class="route-node">光环购物公园</span> <span class="route-arrow">→</span> <span class="route-node">重庆北站</span></div><div class="route-tip">💡 上午退房后去光环购物公园（室内植物园），顺路去重庆北站，方向一致不绕路</div></div>
-    <div class="route-card"><h3>成都 · 广汉与都江堰一日游</h3><div class="route-flow"><span class="route-node">希尔顿</span> <span class="route-arrow">→</span> <span class="route-node highlight">三星堆</span> <span class="route-arrow">→</span> <span class="route-node highlight">都江堰</span> <span class="route-arrow">→</span> <span class="route-node">都江堰站</span> <span class="route-arrow">→</span> <span class="route-node">犀浦站</span> <span class="route-arrow">→</span> <span class="route-node">希尔顿</span></div><div class="route-tip">💡 这天行程很满！7:30起床，9:10出发去成都东站。三星堆约3小时，下午打车去都江堰约1小时。晚上20:27坐高铁S5058回犀浦，再打车回酒店。带好充电宝和干粮！</div></div>
-    <div class="route-card"><h3>成都 · 文化游与返程</h3><div class="route-flow"><span class="route-node">W酒店</span> <span class="route-arrow">→</span> <span class="route-node">杜甫草堂</span> <span class="route-arrow">→</span> <span class="route-node highlight">成都博物馆</span> <span class="route-arrow">→</span> <span class="route-node">东郊记忆</span> <span class="route-arrow">→</span> <span class="route-node">武侯祠/锦里</span> <span class="route-arrow">→</span> <span class="route-node">双流机场</span></div><div class="route-tip">💡 10月6日：上午杜甫草堂，下午成都博物馆，晚上东郊记忆。10月7日上午武侯祠+锦里或宽窄巷子或人民公园喝茶，15:00出发去机场</div></div>
+    <h2 class="sec-title"><span class="dot"></span>每日行程</h2><p class="sec-sub">基于地理位置规划的科学线路 · 天气为10月当地预计</p>
+    <div id="routesBox"></div>
     <h2 class="sec-title" style="margin-top:36px"><span class="dot"></span>详细日程</h2>
-    <div class="day-card">
-      <div class="day-header">
-        <div class="day-badge" style="background:linear-gradient(135deg,#c05e3f,#c08a3e)"><span class="num">1</span><span class="label">DAY</span></div>
-        <div class="day-info"><h3>10月1日 · 出发日</h3><p>苏州 → 南京 → 重庆</p></div>
-        <div class="weather-chip">🌤 重庆 多云 26°/19°</div>
-        <div class="day-actions"><button onclick="addNote('10/1')">+ 备注</button></div>
-      </div>
-      <div class="schedule-list">
-        <div class="schedule-row"><span class="schedule-time">10:20</span><span class="schedule-tag tag-transport">打车</span><span class="schedule-desc">苏州家 → 苏州站 <strong>¥25</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">11:27</span><span class="schedule-tag tag-transport">高铁</span><span class="schedule-desc">G7010 苏州→南京 一等座 <strong>¥191</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">12:50</span><span class="schedule-tag tag-transport">地铁</span><span class="schedule-desc">南京站 → 新街口 <strong>¥3</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">13:00</span><span class="schedule-tag tag-hotel">钟点房</span><span class="schedule-desc">南京新街口德基星空城际酒店 <strong>¥205</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">17:00</span><span class="schedule-tag tag-transport">地铁</span><span class="schedule-desc">新街口 → 禄口机场T2 <strong>¥16</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">19:40</span><span class="schedule-tag tag-transport">飞机</span><span class="schedule-desc">南京禄口T2 → 重庆江北T3 公务舱 <strong>¥2738</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">22:10</span><span class="schedule-tag tag-transport">地铁</span><span class="schedule-desc">江北机场T3 → 全季酒店 <strong>¥6</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">22:30</span><span class="schedule-tag tag-hotel">入住</span><span class="schedule-desc">全季重庆江北机场中央公园店 <strong>¥401</strong></span></div>
-      </div>
-      <div class="day-notes-area" id="notes-10/1"></div>
-    </div>
-    <div class="day-card">
-      <div class="day-header">
-        <div class="day-badge" style="background:linear-gradient(135deg,#c08a3e,#b8a24c)"><span class="num">2</span><span class="label">DAY</span></div>
-        <div class="day-info"><h3>10月2日 · 重庆 Day 1</h3><p>南岸区 → 渝中区</p></div>
-        <div class="weather-chip">⛅ 重庆 多云 27°/20°</div>
-        <div class="day-actions"><button onclick="addNote('10/2')">+ 备注</button></div>
-      </div>
-      <div class="schedule-list">
-        <div class="schedule-row"><span class="schedule-time">上午</span><span class="schedule-tag tag-transport">打车</span><span class="schedule-desc">全季酒店 → 重庆康莱德酒店 <strong>¥40</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">入住</span><span class="schedule-tag tag-hotel">酒店</span><span class="schedule-desc">重庆康莱德酒店·云端江景精致套房 <strong>¥2722</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">上午</span><span class="schedule-tag tag-sight">景点</span><span class="schedule-desc">弹子石老街 → 下浩里 → 龙门浩（南岸区步行串联）</span></div>
-        <div class="schedule-row"><span class="schedule-time">下午</span><span class="schedule-tag tag-sight">景点</span><span class="schedule-desc">过江到渝中 → 解放碑 → 十八梯 → 山城步道</span></div>
-        <div class="schedule-row"><span class="schedule-time">傍晚</span><span class="schedule-tag tag-food">晚餐</span><span class="schedule-desc">解放碑/洪崖洞附近吃重庆火锅</span></div>
-        <div class="schedule-row"><span class="schedule-time">晚上</span><span class="schedule-tag tag-sight">夜景</span><span class="schedule-desc">洪崖洞夜景 → 千厮门大桥拍全景</span></div>
-      </div>
-      <div class="day-notes-area" id="notes-10/2"></div>
-    </div>
-    <div class="day-card">
-      <div class="day-header">
-        <div class="day-badge" style="background:linear-gradient(135deg,#b8a24c,#6b8e7a)"><span class="num">3</span><span class="label">DAY</span></div>
-        <div class="day-info"><h3>10月3日 · 重庆 Day 2</h3><p>渝中区深度游</p></div>
-        <div class="weather-chip">🌦 重庆 阴转小雨 25°/19°</div>
-        <div class="day-actions"><button onclick="addNote('10/3')">+ 备注</button></div>
-      </div>
-      <div class="schedule-list">
-        <div class="schedule-row"><span class="schedule-time">上午</span><span class="schedule-tag tag-transport">打车</span><span class="schedule-desc">康莱德酒店 → 来福士洲际酒店 <strong>¥20</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">入住</span><span class="schedule-tag tag-hotel">酒店</span><span class="schedule-desc">重庆来福士洲际酒店·豪华城市景观大床房 <strong>¥2270</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">上午</span><span class="schedule-tag tag-sight">景点</span><span class="schedule-desc">鹅岭二厂（文创园，适合拍照打卡）</span></div>
-        <div class="schedule-row"><span class="schedule-time">中午</span><span class="schedule-tag tag-sight">景点</span><span class="schedule-desc">李子坝轻轨站（拍轻轨穿楼奇观）</span></div>
-        <div class="schedule-row"><span class="schedule-time">下午</span><span class="schedule-tag tag-sight">景点</span><span class="schedule-desc">三峡博物馆（需提前预约）</span></div>
-        <div class="schedule-row"><span class="schedule-time">傍晚</span><span class="schedule-tag tag-sight">景点</span><span class="schedule-desc">湖广会馆（明清古建筑群）</span></div>
-        <div class="schedule-row"><span class="schedule-time">晚上</span><span class="schedule-tag tag-sight">夜景</span><span class="schedule-desc">朝天门广场 → 来福士夜景</span></div>
-      </div>
-      <div class="day-notes-area" id="notes-10/3"></div>
-    </div>
-    <div class="day-card">
-      <div class="day-header">
-        <div class="day-badge" style="background:linear-gradient(135deg,#6b8e7a,#4a6fa5)"><span class="num">4</span><span class="label">DAY</span></div>
-        <div class="day-info"><h3>10月4日 · 转场日</h3><p>重庆 → 成都</p></div>
-        <div class="weather-chip">⛅ 成都 多云 24°/17°</div>
-        <div class="day-actions"><button onclick="addNote('10/4')">+ 备注</button></div>
-      </div>
-      <div class="schedule-list">
-        <div class="schedule-row"><span class="schedule-time">上午</span><span class="schedule-tag tag-sight">景点</span><span class="schedule-desc">光环购物公园（渝北区，室内植物园）</span></div>
-        <div class="schedule-row"><span class="schedule-time">中午</span><span class="schedule-tag tag-hotel">退房</span><span class="schedule-desc">来福士洲际酒店退房</span></div>
-        <div class="schedule-row"><span class="schedule-time">下午</span><span class="schedule-tag tag-transport">打车</span><span class="schedule-desc">来福士洲际 → 重庆北站 <strong>¥20</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">16:38</span><span class="schedule-tag tag-transport">高铁</span><span class="schedule-desc">G7628 重庆北→成都东 二等座 <strong>¥350</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">18:30</span><span class="schedule-tag tag-transport">地铁</span><span class="schedule-desc">成都东→希尔顿嘉悦里 <strong>¥8</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">入住</span><span class="schedule-tag tag-hotel">酒店</span><span class="schedule-desc">成都领地希尔顿嘉悦里酒店 <strong>¥1942</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">晚上</span><span class="schedule-tag tag-food">晚餐</span><span class="schedule-desc">天府广场附近吃饭散步</span></div>
-      </div>
-      <div class="day-notes-area" id="notes-10/4"></div>
-    </div>
-    <div class="day-card">
-      <div class="day-header">
-        <div class="day-badge" style="background:linear-gradient(135deg,#4a6fa5,#7e6b8f)"><span class="num">5</span><span class="label">DAY</span></div>
-        <div class="day-info"><h3>10月5日 · 广汉 + 都江堰</h3><p>行程最满的一天</p></div>
-        <div class="weather-chip">☀️ 成都 晴 25°/16°</div>
-        <div class="day-actions"><button onclick="addNote('10/5')">+ 备注</button></div>
-      </div>
-      <div class="schedule-list">
-        <div class="schedule-row"><span class="schedule-time">09:10</span><span class="schedule-tag tag-transport">地铁</span><span class="schedule-desc">希尔顿嘉悦里 → 成都东站 <strong>¥8</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">10:27</span><span class="schedule-tag tag-transport">高铁</span><span class="schedule-desc">C5688 成都东→广汉北 二等座 <strong>¥40</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">上午</span><span class="schedule-tag tag-ticket">门票</span><span class="schedule-desc">三星堆博物馆 <strong>¥144</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">下午</span><span class="schedule-tag tag-transport">打车</span><span class="schedule-desc">三星堆 → 都江堰 <strong>¥200</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">下午</span><span class="schedule-tag tag-ticket">门票</span><span class="schedule-desc">都江堰景区 <strong>¥160</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">20:27</span><span class="schedule-tag tag-transport">高铁</span><span class="schedule-desc">S5058 都江堰→犀浦 <strong>¥20</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">晚上</span><span class="schedule-tag tag-transport">打车</span><span class="schedule-desc">都江堰景区→都江堰站+犀浦→酒店 合计<strong>¥45</strong></span></div>
-      </div>
-      <div class="day-notes-area" id="notes-10/5"></div>
-    </div>
-    <div class="day-card">
-      <div class="day-header">
-        <div class="day-badge" style="background:linear-gradient(135deg,#7e6b8f,#b87b8b)"><span class="num">6</span><span class="label">DAY</span></div>
-        <div class="day-info"><h3>10月6日 · 成都文化游</h3><p>杜甫草堂 → 成都博物馆 → 东郊记忆</p></div>
-        <div class="weather-chip">⛅ 成都 多云 24°/16°</div>
-        <div class="day-actions"><button onclick="addNote('10/6')">+ 备注</button></div>
-      </div>
-      <div class="schedule-list">
-        <div class="schedule-row"><span class="schedule-time">上午</span><span class="schedule-tag tag-transport">打车</span><span class="schedule-desc">希尔顿嘉悦里→杜甫草堂往返 <strong>¥30</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">上午</span><span class="schedule-tag tag-ticket">门票</span><span class="schedule-desc">杜甫草堂 <strong>¥100</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">中午</span><span class="schedule-tag tag-food">午餐</span><span class="schedule-desc">杜甫草堂附近或去W酒店路上吃</span></div>
-        <div class="schedule-row"><span class="schedule-time">下午</span><span class="schedule-tag tag-hotel">换酒店</span><span class="schedule-desc">入住成都W酒店·奇遇1卧室特大床套房 <strong>¥1434</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">13:00</span><span class="schedule-tag tag-ticket">门票</span><span class="schedule-desc">成都博物馆（已预约 13:00-18:00）</span></div>
-        <div class="schedule-row"><span class="schedule-time">晚上</span><span class="schedule-tag tag-transport">打车</span><span class="schedule-desc">W酒店→东郊记忆往返 <strong>¥50</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">晚上</span><span class="schedule-tag tag-sight">景点</span><span class="schedule-desc">东郊记忆（文创园区，适合拍照打卡）</span></div>
-      </div>
-      <div class="day-notes-area" id="notes-10/6"></div>
-    </div>
-    <div class="day-card">
-      <div class="day-header">
-        <div class="day-badge" style="background:linear-gradient(135deg,#c05e3f,#b87b8b)"><span class="num">7</span><span class="label">DAY</span></div>
-        <div class="day-info"><h3>10月7日 · 返程日</h3><p>成都 → 南京 → 苏州</p></div>
-        <div class="weather-chip">☀️ 成都 晴 25°/17°</div>
-        <div class="day-actions"><button onclick="addNote('10/7')">+ 备注</button></div>
-      </div>
-      <div class="schedule-list">
-        <div class="schedule-row"><span class="schedule-time">上午</span><span class="schedule-tag tag-sight">景点</span><span class="schedule-desc">武侯祠+锦里 / 宽窄巷子 / 人民公园喝茶（三选一）</span></div>
-        <div class="schedule-row"><span class="schedule-time">14:30</span><span class="schedule-tag tag-hotel">退房</span><span class="schedule-desc">W酒店退房，拿行李</span></div>
-        <div class="schedule-row"><span class="schedule-time">15:00</span><span class="schedule-tag tag-transport">打车</span><span class="schedule-desc">W酒店 → 双流机场T1（约40分钟）</span></div>
-        <div class="schedule-row"><span class="schedule-time">18:30</span><span class="schedule-tag tag-transport">飞机</span><span class="schedule-desc">川航3U8995 成都双流T1→南京禄口T1 <strong>¥2364</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">22:00</span><span class="schedule-tag tag-transport">大巴</span><span class="schedule-desc">南京禄口机场→南京站(机场巴士1号线) <strong>¥25</strong></span></div>
-      </div>
-      <div class="day-notes-area" id="notes-10/7"></div>
-    </div>
-    <div class="day-card">
-      <div class="day-header">
-        <div class="day-badge" style="background:linear-gradient(135deg,#9a9a95,#b0b0ab)"><span class="num">8</span><span class="label">DAY</span></div>
-        <div class="day-info"><h3>10月8日 · 到家</h3><p>南京 → 苏州</p></div>
-        <div class="weather-chip">🌙 苏州 夜间 20°</div>
-        <div class="day-actions"><button onclick="addNote('10/8')">+ 备注</button></div>
-      </div>
-      <div class="schedule-list">
-        <div class="schedule-row"><span class="schedule-time">00:08</span><span class="schedule-tag tag-transport">火车</span><span class="schedule-desc">Z175 南京站→苏州站 硬卧中铺 <strong>¥83.5</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">02:50</span><span class="schedule-tag tag-transport">打车</span><span class="schedule-desc">苏州站 → 苏州家 <strong>¥35</strong></span></div>
-        <div class="schedule-row"><span class="schedule-time">03:20</span><span class="schedule-tag tag-sight">🏠</span><span class="schedule-desc">到家！旅行圆满结束 🎉</span></div>
-      </div>
-      <div class="day-notes-area" id="notes-10/8"></div>
-    </div>
+    <div id="daysBox"></div>
   </section>
   <section id="ledger" class="section">
-    <h2 class="sec-title"><span class="dot"></span>旅行账本</h2>
-    <p class="sec-sub">记录每一笔花费，心中有数</p>
-    <div class="ledger-summary">
-      <div class="total-card"><div class="label" id="totalLabel">已记录总费用</div><div class="amount" id="totalAmount">¥0</div><div class="sub" id="totalSub"></div></div>
-      <div class="chart-card" id="categoryChart"></div>
-    </div>
-    <div class="add-form">
-      <h3>添加费用</h3>
-      <div class="form-grid">
-        <div class="form-field"><label>日期</label><select id="expenseDate"><option value="10/1">10月1日</option><option value="10/2">10月2日</option><option value="10/3">10月3日</option><option value="10/4">10月4日</option><option value="10/5">10月5日</option><option value="10/6">10月6日</option><option value="10/7">10月7日</option><option value="10/8">10月8日</option><option value="预备">预备/其他</option></select></div>
-        <div class="form-field"><label>类别</label><select id="expenseCategory"><option value="交通">交通</option><option value="住宿">住宿</option><option value="餐饮">餐饮</option><option value="门票">门票</option><option value="购物">购物</option><option value="其他">其他</option></select></div>
-        <div class="form-field"><label>项目</label><input type="text" id="expenseItem" placeholder="例如：重庆火锅"></div>
-        <div class="form-field"><label>金额</label><input type="number" id="expenseAmount" placeholder="0"></div>
-      </div>
-      <button class="btn-primary" onclick="addExpense()">添加费用</button>
-    </div>
-    <div class="filter-bar">
-      <button class="filter-pill active" data-filter="all">全部</button>
-      <button class="filter-pill" data-filter="交通">交通</button>
-      <button class="filter-pill" data-filter="住宿">住宿</button>
-      <button class="filter-pill" data-filter="餐饮">餐饮</button>
-      <button class="filter-pill" data-filter="门票">门票</button>
-      <button class="filter-pill" data-filter="购物">购物</button>
-      <button class="filter-pill" data-filter="其他">其他</button>
-    </div>
-    <div class="ledger-table-wrap">
-      <table class="ledger-table"><thead><tr><th>日期</th><th>类别</th><th>项目</th><th>金额</th><th></th></tr></thead><tbody id="ledgerTableBody"></tbody></table>
-    </div>
+    <h2 class="sec-title"><span class="dot"></span>旅行账本</h2><p class="sec-sub">记录每一笔花费，心中有数</p>
+    <div class="ledger-summary"><div class="total-card"><div class="label" id="totalLabel">已记录总费用</div><div class="amount" id="totalAmount">¥0</div><div class="sub" id="totalSub"></div></div><div class="chart-card" id="categoryChart"></div></div>
+    <div class="add-form"><h3>添加费用</h3><div class="form-grid">
+      <div class="form-field"><label>日期</label><select id="expenseDate"><option value="10/1">10月1日</option><option value="10/2">10月2日</option><option value="10/3">10月3日</option><option value="10/4">10月4日</option><option value="10/5">10月5日</option><option value="10/6">10月6日</option><option value="10/7">10月7日</option><option value="10/8">10月8日</option><option value="预备">预备/其他</option></select></div>
+      <div class="form-field"><label>类别</label><select id="expenseCategory"><option value="交通">交通</option><option value="住宿">住宿</option><option value="餐饮">餐饮</option><option value="门票">门票</option><option value="购物">购物</option><option value="其他">其他</option></select></div>
+      <div class="form-field"><label>项目</label><input type="text" id="expenseItem" placeholder="例如：重庆火锅"></div>
+      <div class="form-field"><label>金额</label><input type="number" id="expenseAmount" placeholder="0"></div>
+    </div><button class="btn-primary" onclick="addExpense()">添加费用</button></div>
+    <div class="filter-bar"><button class="filter-pill active" data-filter="all">全部</button><button class="filter-pill" data-filter="交通">交通</button><button class="filter-pill" data-filter="住宿">住宿</button><button class="filter-pill" data-filter="餐饮">餐饮</button><button class="filter-pill" data-filter="门票">门票</button><button class="filter-pill" data-filter="购物">购物</button><button class="filter-pill" data-filter="其他">其他</button></div>
+    <div class="ledger-table-wrap"><table class="ledger-table"><thead><tr><th>日期</th><th>类别</th><th>项目</th><th>金额</th><th></th></tr></thead><tbody id="ledgerTableBody"></tbody></table></div>
   </section>
   <section id="map" class="section">
-    <h2 class="sec-title"><span class="dot"></span>旅行地图</h2>
-    <p class="sec-sub">按天分组 · 数字代表游览顺序 · 图标为景点标志性元素</p>
-    <div class="city-block cq">
-      <div class="city-title"><span class="ct-em">🏔️</span> 重庆 <span style="font-size:0.85rem;color:var(--text2);font-weight:400;margin-left:6px">两江交汇 · 山城</span></div>
-      <div class="city-sub">Day 1-2 · 10月2日至3日</div>
-      <div id="cqFlow"></div>
-    </div>
-    <div class="city-block transition">
-      <div class="city-title"><span class="ct-em">🚄</span> 转场日 <span style="font-size:0.85rem;color:var(--text2);font-weight:400;margin-left:6px">10月4日 · 重庆 → 成都</span></div>
-      <div class="city-sub">上午游重庆 · 傍晚抵成都</div>
-      <div id="transFlow"></div>
-    </div>
-    <div class="city-block cd">
-      <div class="city-title"><span class="ct-em">🐼</span> 成都 <span style="font-size:0.85rem;color:var(--text2);font-weight:400;margin-left:6px">天府之国 · 休闲之都</span></div>
-      <div class="city-sub">Day 4-6 · 10月5日至7日</div>
-      <div id="cdFlow"></div>
-    </div>
+    <h2 class="sec-title"><span class="dot"></span>旅行地图</h2><p class="sec-sub">按天分组 · 数字代表游览顺序 · 图标为景点标志性元素</p>
+    <div id="mapBox"></div>
   </section>
   <section id="vlog" class="section">
-    <h2 class="sec-title"><span class="dot"></span>Vlog 素材</h2>
-    <p class="sec-sub">每日拍摄重点，回来帮你剪视频</p>
+    <h2 class="sec-title"><span class="dot"></span>Vlog 素材</h2><p class="sec-sub">每日拍摄重点，回来帮你剪视频</p>
     <div class="vlog-card"><h3>10月1日 · 出发日</h3><ul class="shot-list">
       <li>✈️ 机场候机厅自拍/妞妞美照</li>
       <li>🌃 飞机起飞时的城市夜景</li>
@@ -598,28 +297,21 @@ details.info-cell summary .hint{font-size:0.75rem;color:var(--text3)}
       <li>🌙 飞机上的云海/夕阳</li>
       <li>📹 结尾：旅行结束啦，下次见</li>
     </ul></div>
-    <div class="vlog-upload-card">
-      <h3>📤 素材收集</h3>
-      <p>旅行结束后，把照片和视频打包发给我，我来帮你：</p>
-      <ul><li>挑选最佳镜头和精彩片段</li><li>配上合适的BGM（重庆川渝风 / 成都休闲风）</li><li>添加有趣的字幕和转场效果</li><li>生成完整的旅行vlog视频</li></ul>
-      <p class="vlog-tip">💡 拍摄建议：每天拍3~5段短视频（每段10~30秒），比拍长视频更容易剪辑</p>
-    </div>
+    <div class="vlog-upload-card"><h3>📤 素材收集</h3><p>旅行结束后，把照片和视频打包发给我，我来帮你：</p><ul><li>挑选最佳镜头和精彩片段</li><li>配上合适的BGM（重庆川渝风 / 成都休闲风）</li><li>添加有趣的字幕和转场效果</li><li>生成完整的旅行vlog视频</li></ul><p class="vlog-tip">💡 拍摄建议：每天拍3~5段短视频（每段10~30秒），比拍长视频更容易剪辑</p></div>
   </section>
   <section id="adjust" class="section">
-    <h2 class="sec-title"><span class="dot"></span>行程调整</h2>
-    <p class="sec-sub">输入文字，智能调整行程计划</p>
+    <h2 class="sec-title"><span class="dot"></span>行程调整</h2><p class="sec-sub">输入文字，智能调整行程计划，所有页面同步更新</p>
     <div class="adjust-hero"><div class="ic">✨</div><div><h3>智能行程助手</h3><p>用自然语言描述你的调整需求</p></div></div>
     <div class="adjust-input-group"><textarea id="adjustInput" placeholder="例如：10月5日不去三星堆了，改去熊猫基地&#10;10月2日增加春熙路，晚上去吃火锅"></textarea><button onclick="applyAdjust()">应用调整</button></div>
     <div class="quick-chips">
       <button onclick="setAdjustText('10月5日不去三星堆了')">🗑️ 删除三星堆</button>
       <button onclick="setAdjustText('10月2日增加春熙路')">➕ 增加春熙路</button>
       <button onclick="setAdjustText('10月7日去人民公园喝茶')">🍵 人民公园喝茶</button>
-      <button onclick="setAdjustText('10月6日成都博物馆改成上午去')">🔄 调整时间</button>
       <button onclick="setAdjustText('10月3日增加火锅')">🍲 加火锅</button>
+      <button onclick="resetTrip()">🔄 恢复默认行程</button>
     </div>
     <div class="result-box" id="adjustResult"><h4>调整结果</h4><p>输入指令后点击应用查看结果</p></div>
-    <div class="tips-section" style="margin-top:28px">
-      <h3>支持的指令格式</h3>
+    <div class="tips-section" style="margin-top:28px"><h3>支持的指令格式</h3>
       <div class="tip-item"><span class="tip-icon">🗑️</span><span><strong>删除景点：</strong>10月5日不去三星堆了、删掉都江堰</span></div>
       <div class="tip-item"><span class="tip-icon">➕</span><span><strong>增加景点：</strong>10月2日增加春熙路、添加熊猫基地</span></div>
       <div class="tip-item"><span class="tip-icon">🔄</span><span><strong>替换景点：</strong>10月5日三星堆改成熊猫基地</span></div>
@@ -629,16 +321,96 @@ details.info-cell summary .hint{font-size:0.75rem;color:var(--text3)}
   <script>
     const tabBtns = document.querySelectorAll(".nav-btn");
     const tabContents = document.querySelectorAll(".section");
-    tabBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const tab = btn.dataset.tab;
-        tabBtns.forEach(b => b.classList.remove("active"));
-        tabContents.forEach(c => c.classList.remove("active"));
-        btn.classList.add("active");
-        document.getElementById(tab).classList.add("active");
-        window.scrollTo({ top: document.getElementById("nav").offsetTop - 60, behavior: "smooth" });
-      });
-    });
+    tabBtns.forEach(btn => { btn.addEventListener("click", () => {
+      const tab = btn.dataset.tab;
+      tabBtns.forEach(b => b.classList.remove("active"));
+      tabContents.forEach(c => c.classList.remove("active"));
+      btn.classList.add("active");
+      document.getElementById(tab).classList.add("active");
+      window.scrollTo({ top: document.getElementById("nav").offsetTop - 60, behavior: "smooth" });
+    }); });
+    const DEFAULT_TRIP = [
+      { day:"10/1", num:1, date:"10月1日", title:"出发日", subtitle:"苏州 → 南京 → 重庆", detail:"苏州 → 南京 → 重庆。高铁 G7010，禄口机场飞重庆，入住全季酒店", weather:"🌤 重庆 多云 26°/19°", city:null, spots:[], fixed:[["10:20","transport","打车","苏州家 → 苏州站 <strong>¥25</strong>"],["11:27","transport","高铁","G7010 苏州→南京 一等座 <strong>¥191</strong>"],["12:50","transport","地铁","南京站 → 新街口 <strong>¥3</strong>"],["13:00","hotel","钟点房","南京新街口德基星空城际酒店 <strong>¥205</strong>"],["17:00","transport","地铁","新街口 → 禄口机场T2 <strong>¥16</strong>"],["19:40","transport","飞机","南京禄口T2 → 重庆江北T3 公务舱 <strong>¥2738</strong>"],["22:10","transport","地铁","江北机场T3 → 全季酒店 <strong>¥6</strong>"],["22:30","hotel","入住","全季重庆江北机场中央公园店 <strong>¥401</strong>"]] },
+      { day:"10/2", num:2, date:"10月2日", title:"重庆 Day 1", subtitle:"南岸区 → 渝中区", detail:"弹子石 → 下浩里 → 龙门浩 → 解放碑 → 十八梯 → 山城步道 → 洪崖洞", weather:"⛅ 重庆 多云 27°/20°", city:"重庆", zone:"南岸区 → 渝中区", color:"#c05e3f", label:"Day 1 · 10月2日", spots:[["康莱德酒店","🏨"],["弹子石","🏘️"],["下浩里","🏘️"],["龙门浩","🌉"],["解放碑","🗼"],["十八梯","🪜"],["山城步道","🚶"],["洪崖洞","🏮"]], fixed:[["上午","transport","打车","全季酒店 → 重庆康莱德酒店 <strong>¥40</strong>"],["入住","hotel","酒店","重庆康莱德酒店·云端江景精致套房 <strong>¥2722</strong>"],["傍晚","food","晚餐","解放碑/洪崖洞附近吃重庆火锅"]] },
+      { day:"10/3", num:3, date:"10月3日", title:"重庆 Day 2", subtitle:"渝中区深度游", detail:"鹅岭二厂 → 李子坝 → 三峡博物馆 → 湖广会馆 → 朝天门", weather:"🌦 重庆 阴转小雨 25°/19°", city:"重庆", zone:"渝中区", color:"#4a6fa5", label:"Day 2 · 10月3日", spots:[["来福士洲际","🏨"],["鹅岭二厂","🏭"],["李子坝","🚈"],["三峡博物馆","🏛️"],["湖广会馆","⛩️"],["朝天门","⛴️"]], fixed:[["上午","transport","打车","康莱德酒店 → 来福士洲际酒店 <strong>¥20</strong>"],["入住","hotel","酒店","重庆来福士洲际酒店·豪华城市景观大床房 <strong>¥2270</strong>"]] },
+      { day:"10/4", num:4, date:"10月4日", title:"转场日", subtitle:"重庆 → 成都", detail:"光环购物公园 → 高铁 G7628 → 成都东站 → 希尔顿嘉悦里 → 天府广场", weather:"⛅ 成都 多云 24°/17°", city:"转场", zone:"重庆 → 成都 · 转场", color:"#6b8e7a", label:"Day 3 · 10月4日", spots:[["来福士洲际","🏨","#6b8e7a"],["光环购物公园","🌿","#6b8e7a"],["高铁 G7628","🚄","linear-gradient(135deg,#6b8e7a,#c05e3f)"],["希尔顿嘉悦里","🏨","#c05e3f"],["天府广场","🌆","#c05e3f"]], fixed:[["中午","hotel","退房","来福士洲际酒店退房"],["下午","transport","打车","来福士洲际 → 重庆北站 <strong>¥20</strong>"],["16:38","transport","高铁","G7628 重庆北→成都东 二等座 <strong>¥350</strong>"],["18:30","transport","地铁","成都东→希尔顿嘉悦里 <strong>¥8</strong>"],["入住","hotel","酒店","成都领地希尔顿嘉悦里酒店 <strong>¥1942</strong>"],["晚上","food","晚餐","天府广场附近吃饭散步"]] },
+      { day:"10/5", num:5, date:"10月5日", title:"成都 Day 1", subtitle:"广汉 + 都江堰", detail:"三星堆 → 都江堰 → 高铁 S5058 回成都。行程最满，带好充电宝", weather:"☀️ 成都 晴 25°/16°", city:"成都", zone:"广汉 → 都江堰", color:"#4a6fa5", label:"Day 4 · 10月5日", spots:[["希尔顿嘉悦里","🏨"],["三星堆","🗿"],["都江堰","🌊"]], fixed:[["09:10","transport","地铁","希尔顿嘉悦里 → 成都东站 <strong>¥8</strong>"],["10:27","transport","高铁","C5688 成都东→广汉北 二等座 <strong>¥40</strong>"],["上午","ticket","门票","三星堆博物馆 <strong>¥144</strong>"],["下午","transport","打车","三星堆 → 都江堰 <strong>¥200</strong>"],["下午","ticket","门票","都江堰景区 <strong>¥160</strong>"],["20:27","transport","高铁","S5058 都江堰→犀浦 <strong>¥20</strong>"],["晚上","transport","打车","都江堰景区→都江堰站+犀浦→酒店 合计<strong>¥45</strong>"]] },
+      { day:"10/6", num:6, date:"10月6日", title:"成都 Day 2", subtitle:"文化游", detail:"杜甫草堂 → 成都博物馆 → 东郊记忆", weather:"⛅ 成都 多云 24°/16°", city:"成都", zone:"成都市区", color:"#6b8e7a", label:"Day 5 · 10月6日", spots:[["成都W酒店","🏨"],["杜甫草堂","🎋"],["成都博物馆","🏛️"],["东郊记忆","🎸"]], fixed:[["上午","transport","打车","希尔顿嘉悦里→杜甫草堂往返 <strong>¥30</strong>"],["上午","ticket","门票","杜甫草堂 <strong>¥100</strong>"],["中午","food","午餐","杜甫草堂附近或去W酒店路上吃"],["下午","hotel","换酒店","入住成都W酒店·奇遇1卧室特大床套房 <strong>¥1434</strong>"],["13:00","ticket","门票","成都博物馆（已预约 13:00-18:00）"],["晚上","transport","打车","W酒店→东郊记忆往返 <strong>¥50</strong>"]] },
+      { day:"10/7", num:7, date:"10月7日", title:"成都 Day 3", subtitle:"返程日", detail:"武侯祠 → 锦里 → 15:00 去双流机场 → 18:30 飞南京", weather:"☀️ 成都 晴 25°/17°", city:"成都", zone:"成都市区", color:"#7e6b8f", label:"Day 6 · 10月7日", spots:[["成都W酒店","🏨"],["武侯祠","⛩️"],["锦里","🏮"]], fixed:[["14:30","hotel","退房","W酒店退房，拿行李"],["15:00","transport","打车","W酒店 → 双流机场T1（约40分钟）"],["18:30","transport","飞机","川航3U8995 成都双流T1→南京禄口T1 <strong>¥2364</strong>"],["22:00","transport","大巴","南京禄口机场→南京站(机场巴士1号线) <strong>¥25</strong>"]] },
+      { day:"10/8", num:8, date:"10月8日", title:"到家", subtitle:"南京 → 苏州", detail:"Z175 火车回苏州，旅行圆满结束", weather:"🌙 苏州 夜间 20°", city:null, spots:[], fixed:[["00:08","transport","火车","Z175 南京站→苏州站 硬卧中铺 <strong>¥83.5</strong>"],["02:50","transport","打车","苏州站 → 苏州家 <strong>¥35</strong>"],["03:20","sight","🏠","到家！旅行圆满结束 🎉"]] }
+    ];
+    const TRIP_KEY = "travel_trip_2026";
+    let trip = [];
+    function loadTrip() {
+      const saved = localStorage.getItem(TRIP_KEY);
+      if (saved) { try { trip = JSON.parse(saved); } catch(e) { trip = JSON.parse(JSON.stringify(DEFAULT_TRIP)); } }
+      else { trip = JSON.parse(JSON.stringify(DEFAULT_TRIP)); saveTrip(); }
+    }
+    function saveTrip() { localStorage.setItem(TRIP_KEY, JSON.stringify(trip)); }
+    function resetTrip() { trip = JSON.parse(JSON.stringify(DEFAULT_TRIP)); saveTrip(); renderAll(); document.getElementById("adjustResult").innerHTML = "<h4>✅ 已恢复</h4><p>行程已恢复为默认方案</p>"; document.getElementById("adjustResult").classList.add("show"); }
+    function renderTimeline() {
+      const box = document.getElementById("timelineBox");
+      const colors = ["#c05e3f","#c08a3e","#b8a24c","#6b8e7a","#4a6fa5","#7e6b8f","#c05e3f","#9a9a95"];
+      box.innerHTML = trip.map((d, i) => {
+        const detail = d.spots.length ? d.spots.map(s => s[0]).join(" → ") : d.detail;
+        return `<div class="timeline-item"><div class="timeline-dot" style="border-color:${colors[i%8]}"></div><div class="timeline-content"><div class="timeline-date" style="color:${colors[i%8]}">${d.date}</div><div class="timeline-title">${d.title}</div><div class="timeline-detail">${detail}</div></div></div>`;
+      }).join("");
+    }
+    function renderRoutes() {
+      const box = document.getElementById("routesBox");
+      const routeGroups = [
+        ["重庆 · 南岸区到渝中区", ["10/2"], "上午南岸区步行游览（弹子石、下浩里、龙门浩相邻）；下午过江逛解放碑、十八梯、山城步道；晚上看洪崖洞夜景，上千厮门大桥拍全景"],
+        ["重庆 · 渝中区深度游", ["10/3"], "上午鹅岭二厂拍照，李子坝看轻轨穿楼；下午三峡博物馆（需预约）；傍晚湖广会馆；晚上朝天门夜景"],
+        ["重庆到成都 · 转场", ["10/4"], "上午光环购物公园，下午高铁 G7628 到成都，入住希尔顿嘉悦里，晚上天府广场散步"],
+        ["成都 · 广汉与都江堰一日游", ["10/5"], "三星堆约3小时，下午打车去都江堰约1小时，晚上坐高铁 S5058 回犀浦，再打车回酒店"],
+        ["成都 · 文化游与返程", ["10/6","10/7"], "10月6日上午杜甫草堂、下午成都博物馆、晚上东郊记忆；10月7日上午武侯祠+锦里，15:00出发去机场"]
+      ];
+      const highlight = ["三星堆","都江堰","洪崖洞","李子坝","成都博物馆"];
+      box.innerHTML = routeGroups.map(rg => {
+        const days = rg[1];
+        const spots = [];
+        days.forEach(dk => {
+          const d = trip.find(t => t.day === dk);
+          if (d) d.spots.forEach(s => { if (!spots.includes(s[0])) spots.push(s[0]); });
+        });
+        const flow = spots.map(n => `<span class="route-node${highlight.includes(n) ? " highlight" : ""}">${n}</span>`).join(`<span class="route-arrow">→</span>`);
+        return `<div class="route-card"><h3>${rg[0]}</h3><div class="route-flow">${flow}</div><div class="route-tip">💡 ${rg[2]}</div></div>`;
+      }).join("");
+    }
+    function renderDays() {
+      const box = document.getElementById("daysBox");
+      const badgeColors = ["linear-gradient(135deg,#c05e3f,#c08a3e)","linear-gradient(135deg,#c08a3e,#b8a24c)","linear-gradient(135deg,#b8a24c,#6b8e7a)","linear-gradient(135deg,#6b8e7a,#4a6fa5)","linear-gradient(135deg,#4a6fa5,#7e6b8f)","linear-gradient(135deg,#7e6b8f,#b87b8b)","linear-gradient(135deg,#c05e3f,#b87b8b)","linear-gradient(135deg,#9a9a95,#b0b0ab)"];
+      box.innerHTML = trip.map((d, i) => {
+        let rows = "";
+        d.fixed.forEach(r => {
+          rows += `<div class="schedule-row"><span class="schedule-time">${r[0]}</span><span class="schedule-tag tag-${r[1]}">${r[2]}</span><span class="schedule-desc">${r[3]}</span></div>`;
+        });
+        if (d.spots.length) {
+          const chips = d.spots.map(s => `<span class="spot-chip"><span class="e">${s[1]}</span>${s[0]}</span>`).join("");
+          rows += `<div class="schedule-row"><span class="schedule-time">游览</span><span class="schedule-tag tag-sight">景点</span><div class="spot-row">${chips}</div></div>`;
+        }
+        return `<div class="day-card"><div class="day-header"><div class="day-badge" style="background:${badgeColors[i%8]}"><span class="num">${d.num}</span><span class="label">DAY</span></div><div class="day-info"><h3>${d.date} · ${d.title}</h3><p>${d.subtitle}</p></div><div class="weather-chip">${d.weather}</div><div class="day-actions"><button onclick="addNote('${d.day}')">+ 备注</button></div></div><div class="schedule-list">${rows}</div><div class="day-notes-area" id="notes-${d.day}"></div></div>`;
+      }).join("");
+    }
+    function renderMap() {
+      const box = document.getElementById("mapBox");
+      const cqDays = trip.filter(d => d.city === "重庆");
+      const transDays = trip.filter(d => d.city === "转场");
+      const cdDays = trip.filter(d => d.city === "成都");
+      function dayHtml(d) {
+        const spots = d.spots.map((s, i) => {
+          const color = s[2] || d.color;
+          return `<div class="flow-spot"><div class="node" style="background:${color}"><span class="em">${s[1]}</span><span class="idx">${i+1}</span></div><span class="nm">${s[0]}</span></div>`;
+        }).join(`<span class="flow-arrow">→</span>`);
+        return `<div class="flow-day"><div class="flow-day-label"><span class="badge" style="background:${d.color}">${d.label}</span><span class="zone">${d.zone}</span></div><div class="flow-spots">${spots}</div></div>`;
+      }
+      let html = "";
+      if (cqDays.length) html += `<div class="city-block cq"><div class="city-title"><span class="ct-em">🏔️</span> 重庆 <span style="font-size:0.85rem;color:var(--text2);font-weight:400;margin-left:6px">两江交汇 · 山城</span></div><div class="city-sub">Day 1-2 · 10月2日至3日</div>${cqDays.map(dayHtml).join("")}</div>`;
+      if (transDays.length) html += `<div class="city-block transition"><div class="city-title"><span class="ct-em">🚄</span> 转场日 <span style="font-size:0.85rem;color:var(--text2);font-weight:400;margin-left:6px">10月4日 · 重庆 → 成都</span></div><div class="city-sub">上午游重庆 · 傍晚抵成都</div>${transDays.map(dayHtml).join("")}</div>`;
+      if (cdDays.length) html += `<div class="city-block cd"><div class="city-title"><span class="ct-em">🐼</span> 成都 <span style="font-size:0.85rem;color:var(--text2);font-weight:400;margin-left:6px">天府之国 · 休闲之都</span></div><div class="city-sub">Day 4-6 · 10月5日至7日</div>${cdDays.map(dayHtml).join("")}</div>`;
+      box.innerHTML = html;
+    }
+    function renderAll() { renderTimeline(); renderRoutes(); renderDays(); renderMap(); renderAllNotes(); }
     const NOTES_KEY = "travel_notes_2026";
     let dayNotes = {};
     function loadNotes() {
@@ -668,18 +440,12 @@ details.info-cell summary .hint{font-size:0.75rem;color:var(--text3)}
       if (dayNotes[day].length === 0) delete dayNotes[day];
       saveNotes(); renderDayNotes(day);
     }
-    function escHtml(text) {
-      const div = document.createElement("div");
-      div.textContent = text;
-      return div.innerHTML;
-    }
+    function escHtml(text) { const div = document.createElement("div"); div.textContent = text; return div.innerHTML; }
     function openModal(title, callback) {
       const overlay = document.getElementById("modalBg");
       document.getElementById("modalTitle").textContent = title;
       const textarea = document.getElementById("modalInput");
-      textarea.value = "";
-      overlay.classList.add("show");
-      setTimeout(() => textarea.focus(), 100);
+      textarea.value = ""; overlay.classList.add("show"); setTimeout(() => textarea.focus(), 100);
       document.getElementById("modalSave").onclick = () => { callback(textarea.value); closeModal(); };
       document.getElementById("modalCancel").onclick = closeModal;
       overlay.onclick = (e) => { if (e.target === overlay) closeModal(); };
@@ -687,16 +453,17 @@ details.info-cell summary .hint{font-size:0.75rem;color:var(--text3)}
     function closeModal() { document.getElementById("modalBg").classList.remove("show"); }
     const adjDates = ["10月1日","10月2日","10月3日","10月4日","10月5日","10月6日","10月7日","10月8日","10/1","10/2","10/3","10/4","10/5","10/6","10/7","10/8","一号","二号","三号","四号","五号","六号","七号","八号","第一天","第二天","第三天","第四天","第五天","第六天","第七天","第八天"];
     const adjRemove = ["不去","删掉","删除","取消","去掉","移除","删去"];
-    const adjAdd = ["添加","增加","加上","去","想去","要去","参观","游览","打卡"];
+    const adjAdd = ["添加","增加","加上","想去","要去","参观","游览","打卡"];
     const adjReplace = ["改成","换成","改为","换","替代"];
     const adjSights = {"三星堆":["三星堆","广汉"],"都江堰":["都江堰","离堆公园"],"杜甫草堂":["杜甫草堂","草堂"],"武侯祠":["武侯祠","诸葛亮"],"锦里":["锦里"],"宽窄巷子":["宽窄巷子","宽巷子","窄巷子"],"人民公园":["人民公园","鹤鸣茶社","喝茶"],"熊猫基地":["熊猫基地","大熊猫","看熊猫","熊猫"],"东郊记忆":["东郊记忆","东郊"],"洪崖洞":["洪崖洞","吊脚楼"],"解放碑":["解放碑","碑"],"十八梯":["十八梯"],"山城步道":["山城步道","步道"],"弹子石":["弹子石","弹子石老街"],"下浩里":["下浩里"],"龙门浩":["龙门浩"],"湖广会馆":["湖广会馆"],"鹅岭二厂":["鹅岭二厂","二厂","鹅岭"],"李子坝":["李子坝","轻轨穿楼"],"三峡博物馆":["三峡博物馆","博物馆"],"光环购物公园":["光环购物公园","光环"],"成都博物馆":["成都博物馆"],"天府广场":["天府广场"],"春熙路":["春熙路","太古里"],"九眼桥":["九眼桥","安顺廊桥"],"文殊院":["文殊院"],"建设路":["建设路","小吃街"],"玉林路":["玉林路","小酒馆"]};
+    const adjEmoji = {"三星堆":"🗿","都江堰":"🌊","杜甫草堂":"🎋","武侯祠":"⛩️","锦里":"🏮","宽窄巷子":"🏮","人民公园":"🍵","熊猫基地":"🐼","东郊记忆":"🎸","洪崖洞":"🏮","解放碑":"🗼","十八梯":"🪜","山城步道":"🚶","弹子石":"🏘️","下浩里":"🏘️","龙门浩":"🌉","湖广会馆":"⛩️","鹅岭二厂":"🏭","李子坝":"🚈","三峡博物馆":"🏛️","光环购物公园":"🌿","成都博物馆":"🏛️","天府广场":"🌆","春熙路":"🏙️","九眼桥":"🌉","文殊院":"⛩️","建设路":"🍜","玉林路":"🍻"};
     function parseAdj(text) {
       text = text.trim(); if (!text) return null;
-      let result = { type: "unknown", day: null, sight: null, newSight: null, msg: "" };
+      let result = { type:"unknown", day:null, sight:null, newSight:null, msg:"" };
       for (let i = 0; i < adjDates.length; i++) {
         if (text.includes(adjDates[i])) {
           const d = adjDates[i];
-          if (d.startsWith("10月")) result.day = d.replace("10月", "10/");
+          if (d.startsWith("10月")) result.day = d.replace("10月","10/");
           else if (d.startsWith("10/")) result.day = d;
           else if (d === "一号") result.day = "10/1"; else if (d === "二号") result.day = "10/2";
           else if (d === "三号") result.day = "10/3"; else if (d === "四号") result.day = "10/4";
@@ -715,28 +482,22 @@ details.info-cell summary .hint{font-size:0.75rem;color:var(--text3)}
         if (foundSight) break;
       }
       result.sight = foundSight;
-      let hasRemove = adjRemove.some(k => text.includes(k));
-      let hasAdd = adjAdd.some(k => text.includes(k));
-      let hasReplace = adjReplace.some(k => text.includes(k));
-      if (hasRemove && foundSight) {
-        result.type = "remove";
-        result.msg = "将在 " + (result.day || "?") + " 的行程中删除 " + foundSight;
-      } else if (hasReplace && foundSight) {
+      const hasRemove = adjRemove.some(k => text.includes(k));
+      const hasAdd = adjAdd.some(k => text.includes(k));
+      const hasReplace = adjReplace.some(k => text.includes(k));
+      if (hasRemove && foundSight) { result.type = "remove"; result.msg = "在 " + (result.day||"?") + " 删除 " + foundSight; }
+      else if (hasReplace && foundSight) {
         let newSight = null;
-        for (const [sight2, keywords] of Object.entries(adjSights)) {
-          if (sight2 === foundSight) continue;
-          for (const kw of keywords) { if (text.includes(kw)) { newSight = sight2; break; } }
+        for (const [s2, kws] of Object.entries(adjSights)) {
+          if (s2 === foundSight) continue;
+          for (const kw of kws) { if (text.includes(kw)) { newSight = s2; break; } }
           if (newSight) break;
         }
-        if (newSight) { result.type = "replace"; result.newSight = newSight; result.msg = "将在 " + (result.day || "?") + " 把 " + foundSight + " 换成 " + newSight; }
-        else { result.type = "replace-need-target"; result.msg = "检测到要替换 " + foundSight + "，但请告诉我换成什么地方"; }
-      } else if (hasAdd && foundSight) {
-        result.type = "add";
-        result.msg = "将在 " + (result.day || "?") + " 的行程中添加 " + foundSight;
-      } else {
-        result.type = "note";
-        result.msg = "已记录您的调整意向，将作为备注保存";
+        if (newSight) { result.type = "replace"; result.newSight = newSight; result.msg = "在 " + (result.day||"?") + " 把 " + foundSight + " 换成 " + newSight; }
+        else { result.type = "replace-need-target"; result.msg = "要替换 " + foundSight + "，但没说换成什么"; }
       }
+      else if (hasAdd && foundSight) { result.type = "add"; result.msg = "在 " + (result.day||"?") + " 添加 " + foundSight; }
+      else { result.type = "note"; result.msg = "已记录为备注"; }
       return result;
     }
     function applyAdjust() {
@@ -746,77 +507,40 @@ details.info-cell summary .hint{font-size:0.75rem;color:var(--text3)}
       if (!text) return;
       const result = parseAdj(text);
       resultDiv.classList.remove("error");
-      if (result.type === "remove" && result.day && result.sight) {
-        if (!dayNotes[result.day]) dayNotes[result.day] = [];
-        dayNotes[result.day].push("【调整】取消去" + result.sight);
-        saveNotes(); renderDayNotes(result.day);
-        resultDiv.innerHTML = "<h4>✅ 已应用</h4><p>" + result.msg + "</p>";
-        resultDiv.classList.add("show"); input.value = "";
-      } else if (result.type === "add" && result.sight) {
-        const day = result.day || "预备";
-        if (!dayNotes[day]) dayNotes[day] = [];
-        dayNotes[day].push("【调整】新增：" + result.sight);
-        saveNotes(); renderDayNotes(day);
-        resultDiv.innerHTML = "<h4>✅ 已应用</h4><p>" + result.msg + "</p>";
-        resultDiv.classList.add("show"); input.value = "";
-      } else if (result.type === "replace" && result.day && result.sight && result.newSight) {
-        if (!dayNotes[result.day]) dayNotes[result.day] = [];
-        dayNotes[result.day].push("【调整】" + result.sight + " → " + result.newSight);
-        saveNotes(); renderDayNotes(result.day);
-        resultDiv.innerHTML = "<h4>✅ 已应用</h4><p>" + result.msg + "</p>";
-        resultDiv.classList.add("show"); input.value = "";
+      if ((result.type === "remove" || result.type === "add" || result.type === "replace") && result.day && result.sight) {
+        const d = trip.find(t => t.day === result.day);
+        if (!d) { resultDiv.innerHTML = "<h4>⚠️ 未找到该日期</h4><p>请确认日期在 10月1日-10月8日 之间</p>"; resultDiv.classList.add("show","error"); return; }
+        if (result.type === "remove") {
+          const before = d.spots.length;
+          d.spots = d.spots.filter(s => !s[0].includes(result.sight) && !result.sight.includes(s[0]));
+          const removed = before - d.spots.length;
+          if (removed > 0) { resultDiv.innerHTML = "<h4>✅ 已删除</h4><p>" + result.msg + "（共移除 " + removed + " 个）</p>"; resultDiv.classList.add("show"); }
+          else { resultDiv.innerHTML = "<h4>⚠️ 未找到</h4><p>" + result.day + " 的行程里没有 " + result.sight + "</p>"; resultDiv.classList.add("show","error"); return; }
+        } else if (result.type === "add") {
+          d.spots.push([result.sight, adjEmoji[result.sight] || "📍"]);
+          resultDiv.innerHTML = "<h4>✅ 已添加</h4><p>" + result.msg + "</p>"; resultDiv.classList.add("show");
+        } else if (result.type === "replace") {
+          const idx = d.spots.findIndex(s => s[0].includes(result.sight) || result.sight.includes(s[0]));
+          if (idx >= 0) { d.spots[idx] = [result.newSight, adjEmoji[result.newSight] || "📍"]; resultDiv.innerHTML = "<h4>✅ 已替换</h4><p>" + result.msg + "</p>"; resultDiv.classList.add("show"); }
+          else { resultDiv.innerHTML = "<h4>⚠️ 未找到</h4><p>" + result.day + " 的行程里没有 " + result.sight + "</p>"; resultDiv.classList.add("show","error"); return; }
+        }
+        saveTrip(); renderAll(); input.value = "";
       } else if (result.type === "note") {
         const day = result.day || "预备";
         if (!dayNotes[day]) dayNotes[day] = [];
         dayNotes[day].push("【备注】" + text);
-        saveNotes(); renderDayNotes(day);
-        resultDiv.innerHTML = "<h4>✅ 已记录</h4><p>已保存为" + day + "的备注</p>";
-        resultDiv.classList.add("show"); input.value = "";
+        saveNotes(); renderAllNotes();
+        resultDiv.innerHTML = "<h4>✅ 已记录</h4><p>已保存为 " + day + " 的备注</p>"; resultDiv.classList.add("show"); input.value = "";
       } else {
-        resultDiv.innerHTML = "<h4>❓ 未能识别</h4><p>请尝试更明确的表达，例如：10月5日不去三星堆了，或 10月2日增加春熙路</p>";
-        resultDiv.classList.add("show", "error");
+        resultDiv.innerHTML = "<h4>❓ 未能识别</h4><p>请尝试更明确的表达，例如：10月5日不去三星堆了，或 10月2日增加春熙路</p>"; resultDiv.classList.add("show","error");
       }
     }
     function setAdjustText(t) { document.getElementById("adjustInput").value = t; document.getElementById("adjustInput").focus(); }
     const STORAGE_KEY = "travel_ledger_2026";
     const presetExpenses = [
-      {date:"10/1",category:"交通",item:"飞机 南京→重庆 公务舱",amount:2738},
-      {date:"10/1",category:"交通",item:"高铁 G7010 苏州→南京 一等座",amount:191},
-      {date:"10/8",category:"交通",item:"火车 Z175 南京→苏州 硬卧",amount:83.5},
-      {date:"10/4",category:"交通",item:"高铁 G7628 重庆北→成都东 二等座",amount:350},
-      {date:"10/5",category:"交通",item:"高铁 C5688 成都东→广汉北 二等座",amount:40},
-      {date:"10/5",category:"交通",item:"高铁 S5058 都江堰→犀浦",amount:20},
-      {date:"10/7",category:"交通",item:"飞机 成都→南京",amount:2364},
-      {date:"10/1",category:"交通",item:"打车 苏州家→苏州站",amount:25},
-      {date:"10/2",category:"交通",item:"打车 全季→康莱德酒店",amount:40},
-      {date:"10/3",category:"交通",item:"打车 康莱德→来福士洲际",amount:20},
-      {date:"10/4",category:"交通",item:"打车 来福士→重庆北站",amount:20},
-      {date:"10/5",category:"交通",item:"打车 三星堆→都江堰",amount:200},
-      {date:"10/5",category:"交通",item:"打车 都江堰→都江堰站+犀浦→酒店",amount:45},
-      {date:"10/6",category:"交通",item:"打车 希尔顿→杜甫草堂往返",amount:30},
-      {date:"10/6",category:"交通",item:"打车 W酒店→东郊记忆往返",amount:50},
-      {date:"10/8",category:"交通",item:"打车 苏州站→苏州家",amount:35},
-      {date:"10/1",category:"交通",item:"地铁 南京站→新街口→禄口机场",amount:19},
-      {date:"10/1",category:"交通",item:"地铁 江北机场→全季酒店",amount:6},
-      {date:"10/4",category:"交通",item:"地铁 成都东→希尔顿嘉悦里",amount:8},
-      {date:"10/5",category:"交通",item:"地铁 希尔顿→成都东",amount:8},
-      {date:"10/7",category:"交通",item:"机场大巴 禄口机场→南京站",amount:25},
-      {date:"10/1",category:"住宿",item:"全季重庆江北机场中央公园店",amount:401},
-      {date:"10/1",category:"住宿",item:"钟点房 南京新街口德基星空城际",amount:205},
-      {date:"10/2",category:"住宿",item:"重庆康莱德酒店 云端江景套房",amount:2722},
-      {date:"10/3",category:"住宿",item:"重庆来福士洲际酒店 城市景观大床",amount:2270},
-      {date:"10/4",category:"住宿",item:"成都领地希尔顿嘉悦里酒店",amount:1942},
-      {date:"10/6",category:"住宿",item:"成都W酒店 奇遇套房",amount:1434},
-      {date:"10/5",category:"门票",item:"三星堆博物馆",amount:144},
-      {date:"10/5",category:"门票",item:"都江堰景区",amount:160},
-      {date:"10/6",category:"门票",item:"杜甫草堂",amount:100}
-    ];
+      {date:"10/1",category:"交通",item:"飞机 南京→重庆 公务舱",amount:2738},{date:"10/1",category:"交通",item:"高铁 G7010 苏州→南京 一等座",amount:191},{date:"10/8",category:"交通",item:"火车 Z175 南京→苏州 硬卧",amount:83.5},{date:"10/4",category:"交通",item:"高铁 G7628 重庆北→成都东 二等座",amount:350},{date:"10/5",category:"交通",item:"高铁 C5688 成都东→广汉北 二等座",amount:40},{date:"10/5",category:"交通",item:"高铁 S5058 都江堰→犀浦",amount:20},{date:"10/7",category:"交通",item:"飞机 成都→南京",amount:2364},{date:"10/1",category:"交通",item:"打车 苏州家→苏州站",amount:25},{date:"10/2",category:"交通",item:"打车 全季→康莱德酒店",amount:40},{date:"10/3",category:"交通",item:"打车 康莱德→来福士洲际",amount:20},{date:"10/4",category:"交通",item:"打车 来福士→重庆北站",amount:20},{date:"10/5",category:"交通",item:"打车 三星堆→都江堰",amount:200},{date:"10/5",category:"交通",item:"打车 都江堰→都江堰站+犀浦→酒店",amount:45},{date:"10/6",category:"交通",item:"打车 希尔顿→杜甫草堂往返",amount:30},{date:"10/6",category:"交通",item:"打车 W酒店→东郊记忆往返",amount:50},{date:"10/8",category:"交通",item:"打车 苏州站→苏州家",amount:35},{date:"10/1",category:"交通",item:"地铁 南京站→新街口→禄口机场",amount:19},{date:"10/1",category:"交通",item:"地铁 江北机场→全季酒店",amount:6},{date:"10/4",category:"交通",item:"地铁 成都东→希尔顿嘉悦里",amount:8},{date:"10/5",category:"交通",item:"地铁 希尔顿→成都东",amount:8},{date:"10/7",category:"交通",item:"机场大巴 禄口机场→南京站",amount:25},{date:"10/1",category:"住宿",item:"全季重庆江北机场中央公园店",amount:401},{date:"10/1",category:"住宿",item:"钟点房 南京新街口德基星空城际",amount:205},{date:"10/2",category:"住宿",item:"重庆康莱德酒店 云端江景套房",amount:2722},{date:"10/3",category:"住宿",item:"重庆来福士洲际酒店 城市景观大床",amount:2270},{date:"10/4",category:"住宿",item:"成都领地希尔顿嘉悦里酒店",amount:1942},{date:"10/6",category:"住宿",item:"成都W酒店 奇遇套房",amount:1434},{date:"10/5",category:"门票",item:"三星堆博物馆",amount:144},{date:"10/5",category:"门票",item:"都江堰景区",amount:160},{date:"10/6",category:"门票",item:"杜甫草堂",amount:100}];
     let expenses = [];
-    function loadExpenses() {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) expenses = JSON.parse(saved);
-      else { expenses = presetExpenses.map((e, i) => ({...e, id: i + 1})); saveExpenses(); }
-    }
+    function loadExpenses() { const saved = localStorage.getItem(STORAGE_KEY); if (saved) expenses = JSON.parse(saved); else { expenses = presetExpenses.map((e,i) => ({...e,id:i+1})); saveExpenses(); } }
     function saveExpenses() { localStorage.setItem(STORAGE_KEY, JSON.stringify(expenses)); }
     function addExpense() {
       const date = document.getElementById("expenseDate").value;
@@ -824,10 +548,9 @@ details.info-cell summary .hint{font-size:0.75rem;color:var(--text3)}
       const item = document.getElementById("expenseItem").value.trim();
       const amount = parseFloat(document.getElementById("expenseAmount").value);
       if (!item || !amount || amount <= 0) { alert("请填写完整的费用信息"); return; }
-      expenses.push({id: Date.now(), date, category, item, amount});
+      expenses.push({id:Date.now(),date,category,item,amount});
       saveExpenses(); renderLedger(); renderOverviewCharts();
-      document.getElementById("expenseItem").value = "";
-      document.getElementById("expenseAmount").value = "";
+      document.getElementById("expenseItem").value = ""; document.getElementById("expenseAmount").value = "";
     }
     function deleteExpense(id) { expenses = expenses.filter(e => e.id !== id); saveExpenses(); renderLedger(); renderOverviewCharts(); }
     let currentFilter = "all";
@@ -837,123 +560,40 @@ details.info-cell summary .hint{font-size:0.75rem;color:var(--text3)}
       tbody.innerHTML = filtered.map(e => `<tr><td>${e.date}</td><td><span class="schedule-tag tag-${getCatClass(e.category)}">${e.category}</span></td><td>${e.item}</td><td><strong>¥${e.amount.toFixed(1)}</strong></td><td><button class="del-btn" onclick="deleteExpense(${e.id})">🗑️</button></td></tr>`).join("");
       updateSummary();
     }
-    function getCatClass(cat) {
-      const m = {"交通":"transport","住宿":"hotel","餐饮":"food","门票":"ticket","购物":"sight","其他":"transport"};
-      return m[cat] || "transport";
-    }
+    function getCatClass(cat) { const m = {"交通":"transport","住宿":"hotel","餐饮":"food","门票":"ticket","购物":"sight","其他":"transport"}; return m[cat] || "transport"; }
     function updateSummary() {
       const cats = ["交通","住宿","餐饮","门票","购物","其他"];
       const colors = {"交通":"#4a6fa5","住宿":"#c05e3f","餐饮":"#c08a3e","门票":"#6b8e7a","购物":"#7e6b8f","其他":"#9a9a95"};
       const bd = {}; cats.forEach(c => bd[c] = 0); expenses.forEach(e => bd[e.category] += e.amount);
-      const total = expenses.reduce((sum, e) => sum + e.amount, 0);
-      const labelEl = document.getElementById("totalLabel");
-      const amountEl = document.getElementById("totalAmount");
-      const subEl = document.getElementById("totalSub");
-      if (currentFilter === "all") {
-        labelEl.textContent = "已记录总费用";
-        amountEl.textContent = "¥" + total.toFixed(1);
-        subEl.textContent = "共 " + expenses.length + " 笔记录";
-      } else {
-        const val = bd[currentFilter] || 0;
-        const cnt = expenses.filter(e => e.category === currentFilter).length;
-        labelEl.textContent = currentFilter + "费用小计";
-        amountEl.textContent = "¥" + val.toFixed(1);
-        subEl.textContent = "共 " + cnt + " 笔 · 占总费用 " + (total > 0 ? Math.round(val/total*100) : 0) + "%";
-      }
+      const total = expenses.reduce((s,e) => s + e.amount, 0);
+      if (currentFilter === "all") { document.getElementById("totalLabel").textContent = "已记录总费用"; document.getElementById("totalAmount").textContent = "¥" + total.toFixed(1); document.getElementById("totalSub").textContent = "共 " + expenses.length + " 笔记录"; }
+      else { const val = bd[currentFilter] || 0; const cnt = expenses.filter(e => e.category === currentFilter).length; document.getElementById("totalLabel").textContent = currentFilter + "费用小计"; document.getElementById("totalAmount").textContent = "¥" + val.toFixed(1); document.getElementById("totalSub").textContent = "共 " + cnt + " 笔 · 占总费用 " + (total>0?Math.round(val/total*100):0) + "%"; }
       const maxVal = Math.max(...Object.values(bd));
-      const chartContainer = document.getElementById("categoryChart");
-      chartContainer.innerHTML = cats.map(cat => {
-        const val = bd[cat];
-        const pct = maxVal > 0 ? (val / maxVal * 100) : 0;
-        return `<div class="chart-row"><span class="chart-label">${cat}</span><div class="chart-track"><div class="chart-fill" style="width:${pct}%;background:${colors[cat]}"></div></div><span class="chart-value">¥${val.toFixed(0)}</span></div>`;
-      }).join("");
+      document.getElementById("categoryChart").innerHTML = cats.map(cat => { const val = bd[cat]; const pct = maxVal>0?(val/maxVal*100):0; return `<div class="chart-row"><span class="chart-label">${cat}</span><div class="chart-track"><div class="chart-fill" style="width:${pct}%;background:${colors[cat]}"></div></div><span class="chart-value">¥${val.toFixed(0)}</span></div>`; }).join("");
     }
-    document.querySelectorAll(".filter-pill").forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".filter-pill").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        currentFilter = btn.dataset.filter;
-        renderLedger();
-      });
-    });
+    document.querySelectorAll(".filter-pill").forEach(btn => { btn.addEventListener("click", () => { document.querySelectorAll(".filter-pill").forEach(b => b.classList.remove("active")); btn.classList.add("active"); currentFilter = btn.dataset.filter; renderLedger(); }); });
     function renderOverviewCharts() {
       const cats = ["交通","住宿","餐饮","门票","购物","其他"];
       const colors = {"交通":"#4a6fa5","住宿":"#c05e3f","餐饮":"#c08a3e","门票":"#6b8e7a","购物":"#7e6b8f","其他":"#9a9a95"};
       const bd = {}; cats.forEach(c => bd[c] = 0); expenses.forEach(e => bd[e.category] += e.amount);
-      const total = expenses.reduce((sum, e) => sum + e.amount, 0) || 1;
+      const total = expenses.reduce((s,e) => s + e.amount, 0) || 1;
       const pieBox = document.getElementById("pieBox");
       if (pieBox) {
-        const cx = 80, cy = 80, rOuter = 66, rInner = 44;
-        let angle = -90;
-        let paths = "";
-        let legend = "";
-        const polar = (cx, cy, r, deg) => {
-          const rad = deg * Math.PI / 180;
-          return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
-        };
-        cats.forEach(cat => {
-          const val = bd[cat];
-          if (val <= 0) return;
-          const sweep = val / total * 360;
-          const a1 = angle, a2 = angle + sweep;
-          angle = a2;
-          const p1 = polar(cx, cy, rOuter, a2);
-          const p2 = polar(cx, cy, rOuter, a1);
-          const p3 = polar(cx, cy, rInner, a1);
-          const p4 = polar(cx, cy, rInner, a2);
-          const largeArc = sweep > 180 ? 1 : 0;
+        const cx=80, cy=80, rOuter=66, rInner=44; let angle=-90; let paths=""; let legend="";
+        const polar = (r,deg) => { const rad=deg*Math.PI/180; return {x:cx+r*Math.cos(rad), y:cy+r*Math.sin(rad)}; };
+        cats.forEach(cat => { const val = bd[cat]; if (val<=0) return; const sweep = val/total*360; const a1=angle, a2=angle+sweep; angle=a2;
+          const p1=polar(rOuter,a2), p2=polar(rOuter,a1), p3=polar(rInner,a1), p4=polar(rInner,a2); const largeArc = sweep>180?1:0;
           paths += `<path d="M ${p1.x.toFixed(1)} ${p1.y.toFixed(1)} A ${rOuter} ${rOuter} 0 ${largeArc} 0 ${p2.x.toFixed(1)} ${p2.y.toFixed(1)} L ${p3.x.toFixed(1)} ${p3.y.toFixed(1)} A ${rInner} ${rInner} 0 ${largeArc} 1 ${p4.x.toFixed(1)} ${p4.y.toFixed(1)} Z" fill="${colors[cat]}"/>`;
           legend += `<div class="pie-leg"><span class="sw" style="background:${colors[cat]}"></span>${cat}<b>¥${val.toFixed(0)}</b><span class="pct">${Math.round(val/total*100)}%</span></div>`;
         });
-        pieBox.innerHTML = `<svg id="pieSvg" width="160" height="160" viewBox="0 0 160 160">${paths}<text x="80" y="75" text-anchor="middle" font-size="11" fill="#b0b0ab">总计</text><text x="80" y="94" text-anchor="middle" font-size="15" font-weight="700" fill="#2c2c2c">¥${(total*1).toFixed(0)}</text></svg><div id="pieLegend">${legend}</div>`;
+        pieBox.innerHTML = `<svg width="160" height="160" viewBox="0 0 160 160">${paths}<text x="80" y="75" text-anchor="middle" font-size="11" fill="#b0b0ab">总计</text><text x="80" y="94" text-anchor="middle" font-size="15" font-weight="700" fill="#2c2c2c">¥${(total*1).toFixed(0)}</text></svg><div id="pieLegend">${legend}</div>`;
       }
       const barBox = document.getElementById("barBox");
-      if (barBox) {
-        const maxVal = Math.max(...Object.values(bd));
-        barBox.innerHTML = cats.map(cat => {
-          const val = bd[cat];
-          const pct = maxVal > 0 ? (val / maxVal * 100) : 0;
-          return `<div class="bar-row"><span class="lbl">${cat}</span><div class="trk"><div class="fill" style="width:${pct}%;background:${colors[cat]}"></div></div><span class="val">¥${val.toFixed(0)}</span></div>`;
-        }).join("");
-      }
+      if (barBox) { const maxVal = Math.max(...Object.values(bd)); barBox.innerHTML = cats.map(cat => { const val = bd[cat]; const pct = maxVal>0?(val/maxVal*100):0; return `<div class="bar-row"><span class="lbl">${cat}</span><div class="trk"><div class="fill" style="width:${pct}%;background:${colors[cat]}"></div></div><span class="val">¥${val.toFixed(0)}</span></div>`; }).join(""); }
     }
-    const cqFlow = [
-      { color:"#c05e3f", label:"Day 1 · 10月2日", zone:"南岸区 → 渝中区", spots:[
-        ["康莱德酒店","🏨"],["弹子石","🏘️"],["下浩里","🏘️"],["龙门浩","🌉"],["解放碑","🗼"],["十八梯","🪜"],["山城步道","🚶"],["洪崖洞","🏮"]
-      ] },
-      { color:"#4a6fa5", label:"Day 2 · 10月3日", zone:"渝中区", spots:[
-        ["来福士洲际","🏨"],["鹅岭二厂","🏭"],["李子坝","🚈"],["三峡博物馆","🏛️"],["湖广会馆","⛩️"],["朝天门","⛴️"]
-      ] }
-    ];
-    const transFlow = [
-      { color:"#6b8e7a", label:"Day 3 · 10月4日", zone:"重庆 → 成都 · 转场", spots:[
-        ["来福士洲际","🏨","#6b8e7a"],["光环购物公园","🌿","#6b8e7a"],["高铁 G7628","🚄","linear-gradient(135deg,#6b8e7a,#c05e3f)"],["希尔顿嘉悦里","🏨","#c05e3f"],["天府广场","🌆","#c05e3f"]
-      ] }
-    ];
-    const cdFlow = [
-      { color:"#4a6fa5", label:"Day 4 · 10月5日", zone:"广汉 → 都江堰", spots:[ ["希尔顿嘉悦里","🏨"],["三星堆","🗿"],["都江堰","🌊"] ] },
-      { color:"#6b8e7a", label:"Day 5 · 10月6日", zone:"成都市区", spots:[ ["成都W酒店","🏨"],["杜甫草堂","🎋"],["成都博物馆","🏛️"],["东郊记忆","🎸"] ] },
-      { color:"#7e6b8f", label:"Day 6 · 10月7日", zone:"成都市区", spots:[ ["成都W酒店","🏨"],["武侯祠","⛩️"],["锦里","🏮"] ] }
-    ];
-    function renderFlow(groups) {
-      let html = "";
-      groups.forEach(g => {
-        html += `<div class="flow-day"><div class="flow-day-label"><span class="badge" style="background:${g.color}">${g.label}</span><span class="zone">${g.zone}</span></div><div class="flow-spots">`;
-        g.spots.forEach((s, i) => {
-          if (i > 0) html += `<span class="flow-arrow">→</span>`;
-          const nodeColor = s[2] || g.color;
-          html += `<div class="flow-spot"><div class="node" style="background:${nodeColor}"><span class="em">${s[1]}</span><span class="idx">${i + 1}</span></div><span class="nm">${s[0]}</span></div>`;
-        });
-        html += `</div></div>`;
-      });
-      return html;
-    }
-    function renderAllMaps() {
-      document.getElementById("cqFlow").innerHTML = renderFlow(cqFlow);
-      document.getElementById("transFlow").innerHTML = renderFlow(transFlow);
-      document.getElementById("cdFlow").innerHTML = renderFlow(cdFlow);
-    }
-    loadExpenses(); renderLedger(); renderOverviewCharts(); loadNotes(); renderAllMaps();
+    document.querySelectorAll("details.info-cell").forEach(d => { d.addEventListener("toggle", () => { if (d.open) { document.querySelectorAll("details.info-cell").forEach(o => { if (o !== d) o.open = false; }); } }); });
+    loadTrip(); loadExpenses(); loadNotes();
+    renderAll(); renderLedger(); renderOverviewCharts();
   </script>
 </body>
 </html>
